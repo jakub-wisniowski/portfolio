@@ -112,6 +112,45 @@ a[data-tool-tip]:hover::after{
 
 
 }
+#projects{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.image-wrapper{
+  position: relative;
+  margin: 1em;
+  background-color: $dark-grey;
+}
+.project-image{
+  display: block;
+  max-width: 100%;
+  transition: opacity ease-out 250ms;
+}
+.image-wrapper:hover{
+  .project-image{
+    opacity: 0.4;
+  }
+}
+.project-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  color: white;
+  transform: translate(-50%,-50%);
+  transition: opacity ease-out 250ms;
+}
+
+.image-wrapper:hover .project-text{
+  opacity: 1;
+}
+.card-title{
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+
 #thankyou_message{
   display: none;
   background-color: white;
