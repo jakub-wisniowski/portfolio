@@ -112,7 +112,7 @@ a[data-tool-tip]:hover::after{
 
 
 }
-#projects{
+.row{
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -121,13 +121,43 @@ a[data-tool-tip]:hover::after{
   position: relative;
   margin: 1em;
   background-color: $dark-grey;
+
+  &::after,
+  &::before{
+    content: "";
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    transition: transform ease-out 250ms;
+  }
+  &::after{
+    border-top:  1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0,1);
+  }
+  &::before{
+    border-left:  1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1,0);
+  }
+  &:hover::after{
+    transform: scale(1.1,1);
+  }
+  &:hover::before{
+    transform: scale(1,1.1);
+  }
 }
 .project-image{
   display: block;
-  max-width: 100%;
   transition: opacity ease-out 250ms;
+  max-width: 200px;
+
 }
+
 .image-wrapper:hover{
+  cursor: pointer;
   .project-image{
     opacity: 0.4;
   }
