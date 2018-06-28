@@ -11,6 +11,10 @@ body{
 .section{
   clear: both;
 }
+.section-header+*{
+  clear: both;
+  padding: 0% 10% 0% 10%;
+}
 h2.section-header{
   color: $red;
   position: relative;
@@ -50,16 +54,14 @@ h2.section-header{
 .bio{
   float: left;
   width: 40%;
-  text-align: right;
 }
 .bio+.bio{
-  position: relative;
-  width:60%;
   text-align: left;
+  width: 60%;
+  position: relative;
+  top: 20px;
+  margin-bottom: 1%;
 
-}
-.bio-text{
-  padding:3%;
 }
 .profile-picture{
   width: 200px;
@@ -72,6 +74,9 @@ p{
   color: white;
   font-weight: 900;
   text-align: justify;
+}
+.instruction{
+  text-align: center;
 }
 a{
   color: $dark-grey;
@@ -107,7 +112,21 @@ a[data-tool-tip]:hover::after{
 
 
 }
-@media screen and (max-width:570px){
+#thankyou_message{
+  display: none;
+  background-color: white;
+  color: black;
+  clear: both;
+  top: 20px;
+  min-height: 40px;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+
+
+}
+@media screen and (max-width:650px){
   .bio{
     clear: both;
     width: 100% !important;
