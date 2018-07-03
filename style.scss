@@ -1,10 +1,11 @@
 $yellow: #ffda00;
 $blue: #00abca;
+$light-grey: rgb(71, 69, 77);
 
 body{
   font-family: Bookman Old Style;
   text-align: center;
-  background-color: rgb(24, 23, 24);
+  background-color: $light-grey;
 }
 .section{
   clear: both;
@@ -14,35 +15,40 @@ body{
   padding: 0% 10% 0% 10%;
 }
 h2.section-header{
-  color: $blue;
+  color: white;
   position: relative;
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
-  min-width: 300px;
-  &::before,
-  &::after{
+  //width: 100%;
+
+  &::after, &::before{
     content: '';
     height:100%;
     position: absolute;
     display:block;
-  }
-  &::before{
-    background: white;
-    z-index: -1;
-    left: -20px;
-    right: -20px;
-  }
-  &::after{
-    background-color: $blue;
     width: 100vw;
     left:50%;
     top:0;
     transform: translateX(-50%);
+  }
+  &::before{
     z-index: -2;
+    background-color: white;
+  }
+  &::after{
+    z-index: -1;
+    background-color: $blue;
   }
   &:hover{
     cursor: pointer;
+    color: $yellow;
+  }
+  &:hover:after{
+    opacity: 0;
+  }
+  &:hover:before{
+    opacity: 1;
   }
 }
 .bio-wrap{
@@ -66,7 +72,7 @@ h2.section-header{
   height:200px;
   border-radius: 50%;
   margin-right: 1em;
-  border: 3px solid $blue;
+  border: 7px solid $blue;
 }
 p{
   color: white;
