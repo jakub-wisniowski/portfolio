@@ -6,6 +6,7 @@ body{
   font-family: Bookman Old Style;
   text-align: center;
   background-color: $light-grey;
+  color: white;
 }
 .section{
   clear: both;
@@ -20,7 +21,7 @@ h2.section-header{
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
-  //width: 100%;
+  width: 100%;
 
   &::after, &::before{
     content: '';
@@ -45,11 +46,13 @@ h2.section-header{
     color: $yellow;
   }
   &:hover:after{
+    cursor: pointer;
     opacity: 0;
   }
   &:hover:before{
-    opacity: 1;
+    cursor: pointer;
   }
+
 }
 .bio-wrap{
   overflow: hidden;
@@ -75,14 +78,13 @@ h2.section-header{
   border: 7px solid $blue;
 }
 p{
-  color: white;
   font-weight: 900;
   text-align: justify;
 }
 .instruction{
   text-align: center;
 }
-a{
+a, a:visited{
   color: $yellow;
 }
 a:hover{
@@ -156,11 +158,9 @@ a[data-tool-tip]:hover::after{
 .project-image{
   display: block;
   transition: opacity ease-out 250ms;
-  max-width: 200px;
+  max-width: 300px;
+  max-height: 300px;
 
-}
-#centerMe{
-  margin-top: 5px;
 }
 
 .image-wrapper:hover{

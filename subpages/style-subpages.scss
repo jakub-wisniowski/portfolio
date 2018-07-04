@@ -1,6 +1,16 @@
 $yellow: #ffda00;
 $blue: #00abca;
+.row{
+  padding-left: 30px;
+  text-align: left;
+  justify-content: flex-start;
 
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 .item {
   height: 300px;
 }
@@ -15,6 +25,10 @@ $blue: #00abca;
   right: 0;
   margin: auto;
   }
+
 .carousel-control:hover{
   color: $yellow;
+}
+#myCarousel{
+  margin-top: 20%;
 }

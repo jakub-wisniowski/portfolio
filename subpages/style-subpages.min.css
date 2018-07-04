@@ -1,1 +1,1 @@
-.item{height:300px}.item img{max-height:100%;max-width:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.carousel-control:hover{color:#ffda00}
+.row{padding-left:30px;text-align:left;justify-content:flex-start}.icon{width:30px;height:30px;margin-right:10px}.item{height:300px}.item img{max-height:100%;max-width:100%;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.carousel-control:hover{color:#ffda00}#myCarousel{margin-top:20%}
