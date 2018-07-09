@@ -78,8 +78,10 @@ h2.section-header{
   border: 7px solid $blue;
 }
 p{
-  font-weight: 900;
   text-align: justify;
+}
+.bio-text p{
+  font-weight: 900;
 }
 .instruction{
   text-align: center;
