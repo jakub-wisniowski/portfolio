@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="../style.min.css">
   <link rel="stylesheet" type="text/css" href="style-subpages.min.css">
 
@@ -22,10 +23,9 @@
         manually or automatically upon providing the app with a csv file. Teacher can also see student's
         progress in two modes: from last 3 lessons or from a specific lesson.
       </p>
-
-
   </div>
-    <div class="technologies">
+  <hr>
+  <div class="technologies">
       <div class="row">
       <img class="icon" src='../images/icons/angular.png' />
         Angular
@@ -50,18 +50,28 @@
       <img class="icon" src='../images/icons/mongoDB.png' />
         MongoDB
       </div>
+	  <div class="row">
+      <img class="icon" src='../images/icons/aws.png' />
+        AWS
+      </div>
     </div>
+	<hr>
     <div class="experience">
+		<p>
 		 This project was my first encounter with web development.
 		 I've learnt the basics of HTML, CSS, Angular2, JavaScript and mongoDB.
 		 I've been developing this project through all its phases, from the talks with the
 		 client until the deployment. I've learnt how to authenticate users,
 		 allow them to upload files and how to design the web application to be user-friendly.
+		 Last but not least, I added a speech sythesis feature using Polly provided by Amazon Web Services.
+		</p>
     </div>
+    <hr>
     <div class="github">
       <img class="icon" src='../images/icons/github.png' />
       <a href="http://www.github.com/adzina/web-app-1337">See code</a>
     </div>
+    <hr>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -94,5 +104,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  <div class="info-link">
+    <a data-toggle="collapse" data-target="#intro" onclick="toggleText()" id="text">Show more info</a>
+  </div>
 </body>

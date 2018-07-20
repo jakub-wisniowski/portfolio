@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="../style.min.css">
   <link rel="stylesheet" type="text/css" href="style-subpages.min.css">
 
@@ -24,10 +25,9 @@
         books as currently read. The system uses this infornation to calculate statistics: books read
         per month and pages per day.
       </p>
-
    </div>
-    <div class="technologies">
-      <div class="technologies">
+   <hr>
+  <div class="technologies">
         <div class="row">
         <img class="icon" src='../images/icons/angular.png' />
           Angular
@@ -53,18 +53,20 @@
           MongoDB
         </div>
       </div>
-    </div>
+	  <hr>
     <div class="experience">
       <p>
         I've learnt how to generate registration links for users and how to write web scrapers
-        in order to obtain i formation about books.
+        in order to obtain information about books from Google Books.
       </p>
 
     </div>
+    <hr>
     <div class="github">
       <img class="icon" src='../images/icons/github.png' />
       <a href="http://www.github.com/adzina/home-library">See code</a>
     </div>
+    <hr>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -96,6 +98,9 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
+  <div class="info-link">
+      <a data-toggle="collapse" onclick="toggleText()" data-target="#intro" id="text">Show more info</a>
   </div>
 
 </body>

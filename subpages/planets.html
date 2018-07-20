@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="../style.min.css">
   <link rel="stylesheet" type="text/css" href="style-subpages.min.css">
 
@@ -19,7 +20,8 @@
         uses pagination and allows users to modify characters' data. User
         can also add a new character via a form with validation set for every field.
       </p>
-  </div>
+    </div>
+    <hr>
     <div class="technologies">
       <div class="technologies">
         <div class="row">
@@ -44,6 +46,7 @@
         </div>
       </div>
     </div>
+	   <hr>
     <div class="experience">
       <p>
         I've learnt the basics of Bootstrap and had a chance to use pagination for the first time.
@@ -51,12 +54,13 @@
         more efficiently. Last but not least I've learnt to write unit tests for
         Angular applications using mock components and mock services.
       </p>
-
     </div>
+    <hr>
     <div class="github">
       <img class="icon" src='../images/icons/github.png' />
       <a href="http://www.github.com/adzina/angular2-tests">See code</a>
     </div>
+    <hr>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -109,5 +113,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  <div class="info-link">
+    <a data-toggle="collapse" data-target="#intro" onclick="toggleText()" id="text">Show more info</a>
+  </div>
 </body>

@@ -1,5 +1,6 @@
 $yellow: #ffda00;
 $blue: #00abca;
+$link-font: 18px;
 .row{
   text-align: left;
   justify-content: flex-start;
@@ -10,8 +11,7 @@ $blue: #00abca;
 
 }
 .github a{
-
-  font-size: 18px;
+  font-size: $link-font;
 }
 .icon {
     width: 1.5em;
@@ -48,4 +48,8 @@ $blue: #00abca;
 .description, .github, .technologies, .experience{
   margin-top: 3px;
   width: 100%;
+}
+.info-link{
+  font-size: $link-font;
+  padding: 20px;
 }

@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="../style.min.css">
   <link rel="stylesheet" type="text/css" href="style-subpages.min.css">
 
@@ -12,7 +13,6 @@
 
   <h2 class="section-header" data-toggle="collapse" data-target="#intro">LEGO app</h2>
   <div id="intro" class="intro collapse section-body">
-  <div class="intro">
     <div class="description">
       <p>
         This app is designed for LEGO fans. User can enter the id of project
@@ -28,6 +28,7 @@
       </p>
 
     </div>
+    <hr>
     <div class="technologies">
         <div class="row">
         <img class="icon" src='../images/icons/android.png' />
@@ -42,6 +43,7 @@
           SQLite
         </div>
     </div>
+	   <hr>
     <div class="experience">
       <p>
         I've used http requests in order to obtain XML files and then had
@@ -52,10 +54,12 @@
       </p>
 
     </div>
+    <hr>
     <div class="github">
       <img class="icon" src='../images/icons/github.png' />
       <a href="http://www.github.com/adzina/android-lego-app">See code</a>
     </div>
+    <hr>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -92,6 +96,9 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
+  <div class="info-link">
+    <a data-toggle="collapse" data-target="#intro" onclick="toggleText()" id="text">Show more info</a>
   </div>
 
 </body>

@@ -4,9 +4,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="../style.min.css">
   <link rel="stylesheet" type="text/css" href="style-subpages.min.css">
-
 </head>
 <body>
   <h2 class="section-header" data-toggle="collapse" data-target="#intro">RPN calculator</h2>
@@ -19,8 +19,8 @@
         information when device is rotated, so the user does not have to re-enter their calculations
         if their device tilts.
       </p>
-
     </div>
+    <hr>
     <div class="technologies">
       <div class="row">
       <img class="icon" src='../images/icons/android.png' />
@@ -35,6 +35,7 @@
         SQLite
       </div>
     </div>
+	   <hr>
     <div class="experience">
       <p>
         I've understood the lifecycle of a mobile application and used this knowledge to
@@ -42,10 +43,12 @@
         I've also learnt how to create the menu and how to design buttons and other UI components.
       </p>
     </div>
+    <hr>
     <div class="github">
       <img class="icon" src='../images/icons/github.png' />
       <a href="http://www.github.com/adzina/RPN-calculator">See code</a>
     </div>
+    <hr>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -103,5 +106,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  <div class="info-link">
+    <a data-toggle="collapse" data-target="#intro" onclick="toggleText()" id="text">Show more info</a>
+  </div>
 </body>
