@@ -2,23 +2,24 @@ $yellow: #ffda00;
 $blue: #00abca;
 $light-grey: rgb(71, 69, 77);
 
-body{
+body {
   font-family: Bookman Old Style;
   text-align: center;
   background-color: $light-grey;
   color: white;
+  font-size: 18px !important;
 }
-.section{
+.section {
   clear: both;
 }
-.section-header+*{
+.section-header+* {
   clear: both;
   padding: 0% 10% 0% 10%;
 }
-a{
+a {
   cursor: pointer;
 }
-h2.section-header{
+h2.section-header {
   color: white;
   position: relative;
   text-transform: uppercase;
@@ -26,7 +27,7 @@ h2.section-header{
   white-space: nowrap;
   width: 100%;
 
-  &::after, &::before{
+  &::after, &::before {
     content: '';
     height:100%;
     position: absolute;
@@ -36,15 +37,15 @@ h2.section-header{
     top:0;
     transform: translateX(-50%);
   }
-  &::before{
+  &::before {
     z-index: -2;
     background-color: white;
   }
-  &::after{
+  &::after {
     z-index: -1;
     background-color: $blue;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
     color: $yellow;
   }
@@ -52,20 +53,20 @@ h2.section-header{
     cursor: pointer;
     opacity: 0;
   }
-  &:hover:before{
+  &:hover:before {
     cursor: pointer;
   }
 
 }
-.bio-wrap{
+.bio-wrap {
   overflow: hidden;
 
 }
-.bio{
+.bio {
   float: left;
   width: 40%;
 }
-.bio+.bio{
+.bio+.bio {
   text-align: left;
   width: 60%;
   position: relative;
@@ -73,32 +74,32 @@ h2.section-header{
   margin-bottom: 1%;
 
 }
-.profile-picture{
+.profile-picture {
   width: 200px;
   height:200px;
   border-radius: 50%;
   margin-right: 1em;
   border: 7px solid $blue;
 }
-p{
+p {
   text-align: justify;
 }
-.bio-text p{
+.bio-text p {
   font-weight: 900;
 }
-.instruction{
+.instruction {
   text-align: center;
 }
-a, a:visited{
+a, a:visited {
   color: $yellow;
 }
-a:hover{
+a:hover {
   color: white;
 }
-a[data-tool-tip]{
+a[data-tool-tip] {
   position: relative;
 }
-a[data-tool-tip]::after{
+a[data-tool-tip]::after {
   content: attr(data-tool-tip);
   position: absolute;
   white-space: nowrap;
@@ -116,25 +117,23 @@ a[data-tool-tip]::after{
     left ease-out 150ms;
 
 }
-a[data-tool-tip]:hover::after{
+a[data-tool-tip]:hover::after {
   transform:scale(1);
   bottom:100%;
   left:0;
-
-
 }
-.row{
+.row {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-.image-wrapper{
+.image-wrapper {
   position: relative;
   margin: 1em;
   background-color: $yellow;
 
   &::after,
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     top: 1.25em;
@@ -143,24 +142,24 @@ a[data-tool-tip]:hover::after{
     right: 1.25em;
     transition: transform ease-out 250ms;
   }
-  &::after{
+  &::after {
     border-top:  1px solid white;
     border-bottom: 1px solid white;
     transform: scale(0,1);
   }
-  &::before{
+  &::before {
     border-left:  1px solid white;
     border-right: 1px solid white;
     transform: scale(1,0);
   }
-  &:hover::after{
+  &:hover::after {
     transform: scale(1.1,1);
   }
-  &:hover::before{
+  &:hover::before {
     transform: scale(1,1.1);
   }
 }
-.project-image{
+.project-image {
   display: block;
   transition: opacity ease-out 250ms;
   max-width: 300px;
@@ -168,13 +167,13 @@ a[data-tool-tip]:hover::after{
 
 }
 
-.image-wrapper:hover{
+.image-wrapper:hover {
   cursor: pointer;
   .project-image{
     opacity: 0.4;
   }
 }
-.project-text{
+.project-text {
   position:absolute;
   top:50%;
   left:50%;
@@ -184,16 +183,16 @@ a[data-tool-tip]:hover::after{
   transition: opacity ease-out 250ms;
 }
 
-.image-wrapper:hover .project-text{
+.image-wrapper:hover .project-text {
   opacity: 1;
 }
-.card-title{
+.card-title {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
 
-#thankyou_message{
+#thankyou_message {
   display: none;
   background-color: white;
   color: black;
@@ -209,17 +208,17 @@ a[data-tool-tip]:hover::after{
 
 }
 
-@media screen and (max-width:650px){
-  .bio{
+@media screen and (max-width:650px) {
+  .bio {
     clear: both;
     width: 100% !important;
     text-align: center !important;
     padding: 5%;
   }
-  a[data-tool-tip]:hover::after{
+  a[data-tool-tip]:hover::after {
     white-space: normal;
   }
-  .bio-text{
+  .bio-text {
     padding-top:0;
   }
 }
