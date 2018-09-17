@@ -1,40 +1,227 @@
-$yellow: #ffda00;
 $blue: #00abca;
 $light-grey: rgb(71, 69, 77);
+@font-face {
+  font-family: "JosefinSans";
+  src: url("fonts/JosefinSans-Regular.eot");
+  src: url("fonts/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/JosefinSans-Regular.woff") format("woff"),
+    url("fonts/JosefinSans-Regular.ttf") format("truetype"),
+    url("fonts/JosefinSans-Regular.svg#JosefinSans") format("svg");
+}
 
 body {
-  font-family: Bookman Old Style;
-  text-align: center;
-  background-color: $light-grey;
-  color: white;
+  background-color: white;
+  font-family: "JosefinSans", sans-serif;
+  font-weight: 600;
   font-size: 18px !important;
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.content_wrapper {
+  width: 100%;
+  padding: 0px;
+  min-height: 100vh;
+}
+.my_page_header {
+  display: inline-block;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  .hamburger_menu {
+    background-image: url(./images/icons/hamburger.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    background-size: cover;
+    @media only screen and (min-width: 650px) {
+      display: none;
+    }
+  }
+  .navigation_small {
+    text-align: right;
+    position: absolute;
+    top: 72px;
+    right: 30px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    ul {
+      list-style: none;
+      padding: 0px;
+      li {
+        padding: 5px;
+        font-size: 120%;
+        &:hover {
+          background: $blue;
+        }
+        a {
+          display: block;
+        }
+      }
+    }
+    @media only screen and (min-width: 650px) {
+      display: none;
+    }
+  }
+  .navigation {
+    position: relative;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+    li {
+      display: inline-block;
+      padding: 0px 5px;
+    }
+    @media only screen and (max-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  .banner_bg_opacity {
+    opacity: 0.3;
+    background-image: url(./images/background/banner.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left bottom;
+    position: absolute;
+  }
+
+  .my_name {
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    padding: 70vh 50px;
+    bottom: 140px;
+  }
+
+  .my_places {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .shortcut_img {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    height: 62px;
+    width: 62px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media only screen and (max-width: 1300px) {
+      transform: scale(0.9);
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    @media only screen and (max-width: 1100px) {
+      transform: scale(0.85);
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      transform: scale(0.75);
+      &:hover {
+        transform: scale(0.85);
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      transform: scale(0.65);
+      &:hover {
+        transform: scale(0.75);
+      }
+    }
+  }
+
+  .my_places_center {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 60px;
+
+    @media only screen and (max-width: 1300px) {
+      bottom: 75px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      bottom: 75px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      bottom: 50px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      bottom: 45px;
+    }
+  }
 }
 .section {
   clear: both;
+  text-align: center;
 }
-.section-header+* {
-  clear: both;
-  padding: 0% 10% 0% 10%;
+form {
+  padding: 0% 10%;
+  margin-top: 2%;
+  opacity: 0.9;
 }
 a {
   cursor: pointer;
+  font-weight: bold;
+  color: black;
 }
-h2.section-header {
+h2.section_header {
   color: white;
   position: relative;
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
   width: 100%;
+  text-align: center;
+  margin-top: 0px;
 
-  &::after, &::before {
-    content: '';
-    height:100%;
+  &::after,
+  &::before {
+    content: "";
+    height: 100%;
     position: absolute;
-    display:block;
+    display: block;
     width: 100vw;
-    left:50%;
-    top:0;
+    left: 50%;
+    top: 0;
     transform: translateX(-50%);
   }
   &::before {
@@ -45,38 +232,25 @@ h2.section-header {
     z-index: -1;
     background-color: $blue;
   }
-  &:hover {
-    cursor: pointer;
-    color: $yellow;
-  }
-  &:hover:after{
-    cursor: pointer;
-    opacity: 0;
-  }
-  &:hover:before {
-    cursor: pointer;
-  }
-
 }
-.bio-wrap {
+.bio_wrap {
   overflow: hidden;
-
 }
 .bio {
   float: left;
   width: 40%;
+  margin-bottom: 10px;
 }
-.bio+.bio {
+.bio + .bio {
   text-align: left;
   width: 60%;
   position: relative;
   top: 20px;
   margin-bottom: 1%;
-
 }
-.profile-picture {
+.profile_picture {
   width: 200px;
-  height:200px;
+  height: 200px;
   border-radius: 50%;
   margin-right: 1em;
   border: 7px solid $blue;
@@ -84,17 +258,14 @@ h2.section-header {
 p {
   text-align: justify;
 }
-.bio-text p {
+.bio_text p {
   font-weight: 900;
 }
 .instruction {
   text-align: center;
 }
-a, a:visited {
-  color: $yellow;
-}
 a:hover {
-  color: white;
+  text-decoration: none;
 }
 a[data-tool-tip] {
   position: relative;
@@ -111,26 +282,23 @@ a[data-tool-tip]::after {
   border-radius: 5px;
   padding: 1em 1em;
   transform: scale(0);
-  transition:
-    transform ease-out 150ms,
-    bottom ease-out 150ms,
+  transition: transform ease-out 150ms, bottom ease-out 150ms,
     left ease-out 150ms;
-
 }
 a[data-tool-tip]:hover::after {
-  transform:scale(1);
-  bottom:100%;
-  left:0;
+  transform: scale(1);
+  bottom: 100%;
+  left: 0;
 }
 .row {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-.image-wrapper {
+.image_wrapper {
   position: relative;
   margin: 1em;
-  background-color: $yellow;
+  background-color: $blue;
 
   &::after,
   &::before {
@@ -143,72 +311,99 @@ a[data-tool-tip]:hover::after {
     transition: transform ease-out 250ms;
   }
   &::after {
-    border-top:  1px solid white;
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
-    transform: scale(0,1);
+    transform: scale(0, 1);
   }
   &::before {
-    border-left:  1px solid white;
+    border-left: 1px solid white;
     border-right: 1px solid white;
-    transform: scale(1,0);
+    transform: scale(1, 0);
   }
   &:hover::after {
-    transform: scale(1.1,1);
+    transform: scale(1.1, 1);
   }
   &:hover::before {
-    transform: scale(1,1.1);
+    transform: scale(1, 1.1);
   }
 }
-.project-image {
+.project_image {
   display: block;
   transition: opacity ease-out 250ms;
   max-width: 300px;
   max-height: 300px;
-
 }
 
-.image-wrapper:hover {
+.image_wrapper:hover {
   cursor: pointer;
-  .project-image{
+  .project_image {
     opacity: 0.4;
   }
 }
-.project-text {
-  position:absolute;
-  top:50%;
-  left:50%;
+.project_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   opacity: 0;
   color: white;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transition: opacity ease-out 250ms;
 }
 
-.image-wrapper:hover .project-text {
+.image_wrapper:hover .project_text {
   opacity: 1;
 }
-.card-title {
+.card_title {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
+#contact {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin: 0px;
+  padding: 0px;
+  .contact_opacity {
+    opacity: 0.3;
+    background-image: url(./images/background/keyboard.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left bottom;
+    position: absolute;
+    margin-top: -10px;
+    z-index: -1;
+  }
+}
 
 #thankyou_message {
   display: none;
-  background-color: white;
   color: black;
   clear: both;
-  top: 20px;
-  min-height: 40px;
+  min-height: 20px;
   position: relative;
-  padding: 10px;
   border-radius: 5px;
   white-space: nowrap;
   margin-bottom: 20px;
-
-
+}
+#send_button {
+  margin-bottom: 10px;
+}
+.footer {
+  width: 100%;
+  clear: both;
+  height: 50px;
+  font-size: 80%;
+  p {
+    text-align: center;
+    position: relative;
+  }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width: 650px) {
   .bio {
     clear: both;
     width: 100% !important;
@@ -218,7 +413,7 @@ a[data-tool-tip]:hover::after {
   a[data-tool-tip]:hover::after {
     white-space: normal;
   }
-  .bio-text {
-    padding-top:0;
+  .bio_text {
+    padding-top: 0;
   }
 }

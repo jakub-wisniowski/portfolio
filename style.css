@@ -1,35 +1,268 @@
+@font-face {
+  font-family: "JosefinSans";
+  src: url("fonts/JosefinSans-Regular.eot");
+  src: url("fonts/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/JosefinSans-Regular.woff") format("woff"), url("fonts/JosefinSans-Regular.ttf") format("truetype"), url("fonts/JosefinSans-Regular.svg#JosefinSans") format("svg");
+}
+
 body {
-  font-family: Bookman Old Style;
-  text-align: center;
-  background-color: #47454d;
-  color: white;
+  background-color: white;
+  font-family: "JosefinSans", sans-serif;
+  font-weight: 600;
   font-size: 18px !important;
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.content_wrapper {
+  width: 100%;
+  padding: 0px;
+  min-height: 100vh;
+}
+
+.my_page_header {
+  display: inline-block;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+.my_page_header .hamburger_menu {
+  background-image: url(./images/icons/hamburger.png);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 650px) {
+  .my_page_header .hamburger_menu {
+    display: none;
+  }
+}
+
+.my_page_header .navigation_small {
+  text-align: right;
+  position: absolute;
+  top: 72px;
+  right: 30px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.my_page_header .navigation_small ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.my_page_header .navigation_small ul li {
+  padding: 5px;
+  font-size: 120%;
+}
+
+.my_page_header .navigation_small ul li:hover {
+  background: #00abca;
+}
+
+.my_page_header .navigation_small ul li a {
+  display: block;
+}
+
+@media only screen and (min-width: 650px) {
+  .my_page_header .navigation_small {
+    display: none;
+  }
+}
+
+.my_page_header .navigation {
+  position: relative;
+  text-align: right;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.my_page_header .navigation li {
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+@media only screen and (max-width: 650px) {
+  .my_page_header .navigation {
+    display: none;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+.banner .banner_bg_opacity {
+  opacity: 0.3;
+  background-image: url(./images/background/banner.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left bottom;
+  position: absolute;
+}
+
+.banner .my_name {
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  padding: 70vh 50px;
+  bottom: 140px;
+}
+
+.banner .my_places {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner .shortcut_img {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  height: 62px;
+  width: 62px;
+}
+
+.banner .shortcut_img img {
+  width: 100%;
+  height: auto;
+}
+
+.banner .shortcut_img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1300px) {
+  .banner .shortcut_img {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .banner .shortcut_img:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner .shortcut_img {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .banner .shortcut_img:hover {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .banner .shortcut_img {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  .banner .shortcut_img:hover {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner .shortcut_img {
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+  }
+  .banner .shortcut_img:hover {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
+
+.banner .my_places_center {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 60px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .banner .my_places_center {
+    bottom: 75px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner .my_places_center {
+    bottom: 75px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .banner .my_places_center {
+    bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner .my_places_center {
+    bottom: 45px;
+  }
 }
 
 .section {
   clear: both;
+  text-align: center;
 }
 
-.section-header + * {
-  clear: both;
-  padding: 0% 10% 0% 10%;
+form {
+  padding: 0% 10%;
+  margin-top: 2%;
+  opacity: 0.9;
 }
 
 a {
   cursor: pointer;
+  font-weight: bold;
+  color: black;
 }
 
-h2.section-header {
+h2.section_header {
   color: white;
   position: relative;
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
   width: 100%;
+  text-align: center;
+  margin-top: 0px;
 }
 
-h2.section-header::after, h2.section-header::before {
-  content: '';
+h2.section_header::after, h2.section_header::before {
+  content: "";
   height: 100%;
   position: absolute;
   display: block;
@@ -40,37 +273,24 @@ h2.section-header::after, h2.section-header::before {
           transform: translateX(-50%);
 }
 
-h2.section-header::before {
+h2.section_header::before {
   z-index: -2;
   background-color: white;
 }
 
-h2.section-header::after {
+h2.section_header::after {
   z-index: -1;
   background-color: #00abca;
 }
 
-h2.section-header:hover {
-  cursor: pointer;
-  color: #ffda00;
-}
-
-h2.section-header:hover:after {
-  cursor: pointer;
-  opacity: 0;
-}
-
-h2.section-header:hover:before {
-  cursor: pointer;
-}
-
-.bio-wrap {
+.bio_wrap {
   overflow: hidden;
 }
 
 .bio {
   float: left;
   width: 40%;
+  margin-bottom: 10px;
 }
 
 .bio + .bio {
@@ -81,7 +301,7 @@ h2.section-header:hover:before {
   margin-bottom: 1%;
 }
 
-.profile-picture {
+.profile_picture {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -93,7 +313,7 @@ p {
   text-align: justify;
 }
 
-.bio-text p {
+.bio_text p {
   font-weight: 900;
 }
 
@@ -101,12 +321,8 @@ p {
   text-align: center;
 }
 
-a, a:visited {
-  color: #ffda00;
-}
-
 a:hover {
-  color: white;
+  text-decoration: none;
 }
 
 a[data-tool-tip] {
@@ -126,10 +342,10 @@ a[data-tool-tip]::after {
   padding: 1em 1em;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
-  transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
-  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
-  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
+  -webkit-transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
+  transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
+  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
+  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
 }
 
 a[data-tool-tip]:hover::after {
@@ -149,13 +365,13 @@ a[data-tool-tip]:hover::after {
   margin-top: 10px;
 }
 
-.image-wrapper {
+.image_wrapper {
   position: relative;
   margin: 1em;
-  background-color: #ffda00;
+  background-color: #00abca;
 }
 
-.image-wrapper::after, .image-wrapper::before {
+.image_wrapper::after, .image_wrapper::before {
   content: "";
   position: absolute;
   top: 1.25em;
@@ -168,31 +384,31 @@ a[data-tool-tip]:hover::after {
   transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
 }
 
-.image-wrapper::after {
+.image_wrapper::after {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
 }
 
-.image-wrapper::before {
+.image_wrapper::before {
   border-left: 1px solid white;
   border-right: 1px solid white;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
 }
 
-.image-wrapper:hover::after {
+.image_wrapper:hover::after {
   -webkit-transform: scale(1.1, 1);
           transform: scale(1.1, 1);
 }
 
-.image-wrapper:hover::before {
+.image_wrapper:hover::before {
   -webkit-transform: scale(1, 1.1);
           transform: scale(1, 1.1);
 }
 
-.project-image {
+.project_image {
   display: block;
   -webkit-transition: opacity ease-out 250ms;
   transition: opacity ease-out 250ms;
@@ -200,15 +416,15 @@ a[data-tool-tip]:hover::after {
   max-height: 300px;
 }
 
-.image-wrapper:hover {
+.image_wrapper:hover {
   cursor: pointer;
 }
 
-.image-wrapper:hover .project-image {
+.image_wrapper:hover .project_image {
   opacity: 0.4;
 }
 
-.project-text {
+.project_text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,27 +436,62 @@ a[data-tool-tip]:hover::after {
   transition: opacity ease-out 250ms;
 }
 
-.image-wrapper:hover .project-text {
+.image_wrapper:hover .project_text {
   opacity: 1;
 }
 
-.card-title {
+.card_title {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
+#contact {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+#contact .contact_opacity {
+  opacity: 0.3;
+  background-image: url(./images/background/keyboard.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left bottom;
+  position: absolute;
+  margin-top: -10px;
+  z-index: -1;
+}
+
 #thankyou_message {
   display: none;
-  background-color: white;
   color: black;
   clear: both;
-  top: 20px;
-  min-height: 40px;
+  min-height: 20px;
   position: relative;
-  padding: 10px;
   border-radius: 5px;
   white-space: nowrap;
   margin-bottom: 20px;
+}
+
+#send_button {
+  margin-bottom: 10px;
+}
+
+.footer {
+  width: 100%;
+  clear: both;
+  height: 50px;
+  font-size: 80%;
+}
+
+.footer p {
+  text-align: center;
+  position: relative;
 }
 
 @media screen and (max-width: 650px) {
@@ -253,7 +504,7 @@ a[data-tool-tip]:hover::after {
   a[data-tool-tip]:hover::after {
     white-space: normal;
   }
-  .bio-text {
+  .bio_text {
     padding-top: 0;
   }
 }
