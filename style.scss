@@ -19,6 +19,38 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+a {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+a:not(.shortcut_img):not(.navigation_link) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0em;
+      bottom: 0em;
+      left: 0em;
+      right: 0em;
+      height: 1.5em;
+      transition: transform ease-out 250ms;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      transform: scale(0, 1);
+    }
+   &:hover::before {
+    transform: scale(1, 1);
+   } 
+}
+.navigation_link {
+  &::after {
+    content: "";
+    position: relative;
+    top: 0px;
+    border-bottom: 1px solid black;
+  }
+}
 .content_wrapper {
   width: 100%;
   padding: 0px;
@@ -64,6 +96,9 @@ body {
         }
         a {
           display: block;
+          &:hover {
+            color: white;
+          }
         }
       }
     }
@@ -198,11 +233,6 @@ form {
   margin-top: 2%;
   opacity: 0.9;
 }
-a {
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-}
 h2.section_header {
   color: white;
   position: relative;
@@ -266,6 +296,7 @@ p {
 }
 a:hover {
   text-decoration: none;
+  color: $blue;
 }
 a[data-tool-tip] {
   position: relative;

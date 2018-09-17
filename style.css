@@ -15,6 +15,42 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+a:not(.shortcut_img):not(.navigation_link)::before {
+  content: "";
+  position: absolute;
+  top: 0em;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  height: 1.5em;
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+
+a:not(.shortcut_img):not(.navigation_link):hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.navigation_link::after {
+  content: "";
+  position: relative;
+  top: 0px;
+  border-bottom: 1px solid black;
+}
+
 .content_wrapper {
   width: 100%;
   padding: 0px;
@@ -75,6 +111,10 @@ body {
 
 .my_page_header .navigation_small ul li a {
   display: block;
+}
+
+.my_page_header .navigation_small ul li a:hover {
+  color: white;
 }
 
 @media only screen and (min-width: 650px) {
@@ -244,12 +284,6 @@ form {
   opacity: 0.9;
 }
 
-a {
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-}
-
 h2.section_header {
   color: white;
   position: relative;
@@ -323,6 +357,7 @@ p {
 
 a:hover {
   text-decoration: none;
+  color: #00abca;
 }
 
 a[data-tool-tip] {
