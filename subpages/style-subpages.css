@@ -1,3 +1,15 @@
+.go_back {
+  position: relative;
+  top: 35px;
+  z-index: 9;
+}
+
+.subpage_wrapper {
+  width: 100%;
+  padding: 0px;
+  min-height: 90vh;
+}
+
 .row {
   text-align: left;
   -webkit-box-pack: start;
@@ -9,7 +21,7 @@
 }
 
 .github a {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .icon {
@@ -34,28 +46,34 @@
 }
 
 .carousel-control:hover {
-  color: #ffda00;
+  color: #00abca;
 }
 
 #myCarousel {
   margin-top: 10px;
 }
 
-.carousel-control.left, .carousel-control.right {
+.carousel-control.left,
+.carousel-control.right {
   background-image: none;
+  color: #00abca;
 }
 
 .intro {
   padding: 0% 10% 0% 10%;
 }
 
-.description, .github, .technologies, .experience {
+.description,
+.github,
+.technologies,
+.experience {
   margin-top: 3px;
   width: 100%;
 }
 
-.info-link {
-  font-size: 18px;
+.info_link {
+  font-size: 20px;
   padding: 20px;
+  text-align: center;
 }
 /*# sourceMappingURL=style-subpages.css.map */
