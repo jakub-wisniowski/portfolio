@@ -1,16 +1,7 @@
 (function() {
-  function validEmail(email) { // see:
+  function validEmail(email) {
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return re.test(email);
-  }
-
-  function validateHuman(honeypot) {
-    if (honeypot) {  //if hidden form filled up
-      console.log("Robot Detected!");
-      return true;
-    } else {
-      console.log("Welcome Human!");
-    }
   }
 
   // get all data in form and return object
@@ -64,12 +55,6 @@
     event.preventDefault();           // we are submitting via xhr below
     var data = getFormData();         // get the values submitted in the form
 
-    /* OPTION: Remove this comment to enable SPAM prevention, see README.md
-    if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-      return false;
-    }
-    */
-
     if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
       var invalidEmail = document.getElementById("email-invalid");
       if (invalidEmail) {
@@ -82,12 +67,10 @@
       var url = event.target.action;  //
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
-      // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
           console.log( xhr.status, xhr.statusText );
           console.log(xhr.responseText);
-          //document.getElementById("gform").style.display = "none"; // hide form
           var thankYouMessage = document.getElementById("thankyou_message");
           console.log("thank you message "+thankYouMessage);
           if (thankYouMessage) {
