@@ -21,7 +21,7 @@ a {
   color: black;
 }
 
-a:not(.shortcut_img):not(.navigation_link)::before {
+a:not(.shortcut_img):not(.navigation_link_small)::before {
   content: "";
   position: absolute;
   top: 0em;
@@ -33,22 +33,15 @@ a:not(.shortcut_img):not(.navigation_link)::before {
   transition: -webkit-transform ease-out 250ms;
   transition: transform ease-out 250ms;
   transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #47454d;
+  border-bottom: 1px solid #47454d;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
 }
 
-a:not(.shortcut_img):not(.navigation_link):hover::before {
+a:not(.shortcut_img):not(.navigation_link_small):hover::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-}
-
-.navigation_link::after {
-  content: "";
-  position: relative;
-  top: 0px;
-  border-bottom: 1px solid black;
 }
 
 .content_wrapper {
@@ -134,6 +127,15 @@ a:not(.shortcut_img):not(.navigation_link):hover::before {
 .my_page_header .navigation li {
   display: inline-block;
   padding: 0px 5px;
+}
+
+.my_page_header .navigation li a {
+  position: relative;
+}
+
+.my_page_header .navigation li a::before {
+  border-top: 2px solid #47454d !important;
+  border-bottom: 2px solid #47454d !important;
 }
 
 @media only screen and (max-width: 650px) {
