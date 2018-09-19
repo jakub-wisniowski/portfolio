@@ -6,11 +6,28 @@ $link-font: 20px;
     font-size: 25px;
   }
 }
-
 .go_back {
   position: relative;
+  z-index: 1;
+}
+.home {
+    background-image: url(../images/icons/home.png);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 30px;
+    top: 16px;
+    background-size: cover;
+    @media only screen and (min-width: 650px) {
+      display: none;
+    }
+}
+.arrow {
+  position: relative;
   top: 35px;
-  z-index: 9;
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
 }
 .subpage_wrapper {
   width: 100%;
