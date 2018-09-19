@@ -1,3 +1,9 @@
+@media only screen and (max-width: 650px) {
+  .subpage_wrapper {
+    font-size: 25px;
+  }
+}
+
 .go_back {
   position: relative;
   top: 35px;
@@ -72,6 +78,7 @@
 }
 
 .info_link {
+  position: relative;
   font-size: 20px;
   padding: 20px;
   text-align: center;

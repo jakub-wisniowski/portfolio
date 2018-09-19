@@ -1,6 +1,12 @@
 $blue: #00abca;
 $link-font: 20px;
 
+@media only screen and (max-width: 650px) {
+  .subpage_wrapper {
+    font-size: 25px;
+  }
+}
+
 .go_back {
   position: relative;
   top: 35px;
@@ -62,6 +68,7 @@ $link-font: 20px;
   width: 100%;
 }
 .info_link {
+  position: relative;
   font-size: $link-font;
   padding: 20px;
   text-align: center;
