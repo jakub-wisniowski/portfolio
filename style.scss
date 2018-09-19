@@ -25,7 +25,7 @@ a {
   font-weight: bold;
   color: black;
 }
-a:not(.shortcut_img):not(.navigation_link_small) {
+a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control) {
     &::before {
       content: "";
       position: absolute;

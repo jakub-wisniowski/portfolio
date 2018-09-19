@@ -21,7 +21,7 @@ a {
   color: black;
 }
 
-a:not(.shortcut_img):not(.navigation_link_small)::before {
+a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control)::before {
   content: "";
   position: absolute;
   top: 0em;
@@ -39,7 +39,7 @@ a:not(.shortcut_img):not(.navigation_link_small)::before {
           transform: scale(0, 1);
 }
 
-a:not(.shortcut_img):not(.navigation_link_small):hover::before {
+a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control):hover::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
