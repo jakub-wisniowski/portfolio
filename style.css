@@ -444,7 +444,7 @@ a[data-tool-tip]:hover::after {
   background: #00abca;
   max-width: 300px;
   margin-bottom: 20px;
-  margin-left: 10px;
+  margin-left: 40px;
   cursor: pointer;
 }
 
