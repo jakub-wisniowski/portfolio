@@ -15,108 +15,90 @@
 
 <body>
   <div class="content_wrapper">
-      <div class="my_page_header">
-          <div class="hamburger_menu" data-toggle="collapse" data-target="#nav"></div>
-          <div id="nav" class="navigation_small collapse">
-              <ul>
-                  <li id="button_about"><a class="navigation_link_small" href="#about"  data-toggle="collapse" data-target="#nav">ABOUT</a></li>
-                  <li id="button_projects"><a class="navigation_link_small" href="#projects"  data-toggle="collapse" data-target="#nav">PROJECTS</a></li>
-                  <li id="button_contact"><a class="navigation_link_small" href="#contact"  data-toggle="collapse" data-target="#nav">CONTACT</a></li>
-              </ul>
-          </div>
-          <ul class="navigation">
-              <li id="button_about"><a class="navigation_link" href="#about">ABOUT</a></li>
-              <li id="button_projects"><a class="navigation_link" href="#projects">PROJECTS</a></li>
-              <li id="button_contact"><a class="navigation_link" href="#contact">CONTACT</a></li>
-          </ul>
+    <div class="my_page_header">
+      <div class="hamburger_menu" data-toggle="collapse" data-target="#nav"></div>
+      <div id="nav" class="navigation_small collapse">
+        <ul>
+          <li id="button_about">
+            <a class="navigation_link_small" href="#about" data-toggle="collapse" data-target="#nav">ABOUT</a>
+          </li>
+          <li id="button_projects">
+            <a class="navigation_link_small" href="#projects" data-toggle="collapse" data-target="#nav">PROJECTS</a>
+          </li>
+          <li id="button_contact">
+            <a class="navigation_link_small" href="#contact" data-toggle="collapse" data-target="#nav">CONTACT</a>
+          </li>
+        </ul>
       </div>
-      <div class="banner">
-        <div class="banner_bg_opacity"></div>
-        <div class="my_name">
-          <h1>ADRIANNA WISNIOWSKA</h1>
-          <h2>JUNIOR FRONT-END DEVELOPER</h2>
-        </div>
-        <div class="my_places_center">
-            <div class="my_places">
-                <a href="https://github.com/adzina" target="-blank" class="shortcut_img">
-                    <img src="images/icons/github.png"/></a>
-                <a href="https://www.linkedin.com/in/adrianna.wisniowska/" target="-blank" class="shortcut_img">
-                    <img src="images/icons/linkedin.png"/></a>
-            </div>
-        </div>
+      <ul class="navigation">
+        <li id="button_about">
+          <a class="navigation_link" href="#about">ABOUT</a>
+        </li>
+        <li id="button_projects">
+          <a class="navigation_link" href="#projects">PROJECTS</a>
+        </li>
+        <li id="button_contact">
+          <a class="navigation_link" href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+    <div class="banner">
+      <div class="banner_bg_opacity"></div>
+      <div class="my_name">
+        <h1>ADRIANNA WISNIOWSKA</h1>
+        <h2>JUNIOR FRONT-END DEVELOPER</h2>
       </div>
-      <div class="section" id="about">
-        <h2 class="section_header">About me</h2>
-        <div id="about_me section_content">
-          <div id="bio_wrap">
-            <div class="bio"><img class="profile_picture" src="images/profile.png" /></div>
-            <div class="bio">
-              <div class="bio_text">
-                <p>
-                  I'm a student of 4<sup>th</sup> year of&nbspcomputing at&nbspthe
-                  <a href="https://www4.put.poznan.pl/en" data-tool-tip="Go to PUT webpage">Poznan University of&nbspTechnology</a>.
-                </p>
-    
-                <p>
-                  I'm looking for junior level frontend or&nbspfullstack positions. Right now, I'm working mainly in&nbsp<a href="https://angular.io/docs" data-tool-tip="Go to Angular documentation">Angular2+</a>,&nbsp<a href="https://angularjs.org" data-tool-tip="Go to AngularJS documentation">AngularJS</a> and&nbsp
-                  <a href="https://sailsjs.com/documentation/reference" data-tool-tip="Go to Sails documentation">SailsJS</a>. Recently, I have been learning Angular Material Design and e2e tests.
-                </p>
-                <p>
-                  I also have basic understanding of&nbsp Java, Python, Kotlin and&nbspC#.
-                </p>
-              </div>
-    
-            </div>
-          </div>
-    
+      <div class="my_places_center">
+        <div class="my_places">
+          <a href="https://github.com/adzina" target="-blank" class="shortcut_img">
+            <img src="images/icons/github.png" />
+          </a>
+          <a href="https://www.linkedin.com/in/adrianna.wisniowska/" target="-blank" class="shortcut_img">
+            <img src="images/icons/linkedin.png" />
+          </a>
         </div>
       </div>
-      <div class="section" id="projects">
-        <h2 class="section_header">Projects</h2>
-        <div id="projects_content section_content">
-          <div class="row">
-            <div class="image_wrapper" onclick="location.href='subpages/AKN-web-app.html';">
-              <img src="images/AKN-web-app/modify-account.png" class="project_image">
-              <div class="project_text">
-                <h3 class='card_title'>AKN webapp</h3>
-                <p class="card_body">
-                  Angular&nbspSailsJS&nbspMongoDB
-                </p>
-              </div>
-            </div>
-            <div class="image_wrapper" onclick="location.href='subpages/AKN-mobile-app.html';">
-              <img src="images/AKN-mobile-app/login-icon.png" class="project_image">
-              <div class="project_text">
-                <h3 class='card_title'>AKN mobile app</h3>
-                <p class="card_body">
-                  Ionic2&nbspHTML5&nbspCSS3
-                </p>
-              </div>
-            </div>
+    </div>
+    <div class="section" id="about">
+      <h2 class="section_header">About me</h2>
+      <div id="about_me section_content">
+        <div id="bio_wrap">
+          <div class="bio">
+            <img class="profile_picture" src="images/profile.png" />
           </div>
-          <div class="row">
-            <div class="image_wrapper" onclick="location.href='subpages/RPN-calc.html';">
-              <img src="images/RPN-calc/basic.png" class="project_image">
-              <div class="project_text">
-                <h3 class='card_title'>RPN calculator</h3>
-                <p class="card_body">
-                  Android&nbspKotlin&nbspSQLite
-                </p>
-              </div>
+          <div class="bio">
+            <div class="bio_text">
+              <p>
+                I'm a student of 4
+                <sup>th</sup> year of&nbspcomputing at&nbspthe
+                <a href="https://www4.put.poznan.pl/en" data-tool-tip="Go to PUT webpage">Poznan University of&nbspTechnology</a>.
+              </p>
+
+              <p>
+                I'm looking for junior level frontend or&nbspfullstack positions. Right now, I'm working mainly in&nbsp
+                <a
+                  href="https://angular.io/docs" data-tool-tip="Go to Angular documentation">Angular2+</a>,&nbsp
+                <a href="https://angularjs.org" data-tool-tip="Go to AngularJS documentation">AngularJS</a> and&nbsp
+                <a href="https://sailsjs.com/documentation/reference" data-tool-tip="Go to Sails documentation">SailsJS</a>. Recently, I have been learning Angular Material Design and e2e tests.
+              </p>
+              <p>
+                I also have basic understanding of&nbsp Java, Python, Kotlin and&nbspC#.
+              </p>
             </div>
-            <div class="image_wrapper" onclick="location.href='subpages/lego-app.html';">
-              <img src="images/Lego-app/project-view.png" class="project_image">
-              <div class="project_text">
-                <h3 class='card_title'>Lego app</h3>
-                <p class="card_body">
-                  Android&nbspKotlin&nbspSQLite
-                </p>
-              </div>
-            </div>
+
           </div>
-          <div class="row">
-            <div class="image_wrapper" onclick="location.href='subpages/home-library.html';">
-              <img src="images/Home library/home-library-icon.png" class="project_image">
+        </div>
+
+      </div>
+    </div>
+    <div class="section" id="projects">
+      <h2 class="section_header">Projects</h2>
+      <div id="projects_content section_content">
+        <div class="image_container">
+            <div class="tight horizontal" onclick="location.href='subpages/home-library.html';">
+              <div class="project_image">
+                <img src="images/Home library/home-library-icon.png">
+              </div>
               <div class="project_text">
                 <h3 class='card_title'>Home library</h3>
                 <p class="card_body">
@@ -124,8 +106,10 @@
                 </p>
               </div>
             </div>
-            <div class="image_wrapper" onclick="location.href='subpages/planets.html';">
-              <img src="images/planets/list-view.png" class="project_image">
+            <div class="tight horizontal" onclick="location.href='subpages/planets.html';">
+              <div class="project_image">
+                <img src="images/planets/list-view.png">
+              </div>
               <div class="project_text">
                 <h3 class='card_title'>Planets</h3>
                 <p class="card_body">
@@ -133,28 +117,75 @@
                 </p>
               </div>
             </div>
+          <div class="tight" onclick="location.href='subpages/AKN-web-app.html';">
+            <div class="project_image">
+              <img src="images/AKN-web-app/modify-account.png">
+            </div>
+            <div class="project_text">
+              <h3 class='card_title'>AKN webapp</h3>
+              <p class="card_body">
+                Angular&nbspSailsJS&nbspMongoDB
+              </p>
+            </div>
           </div>
-    
+          <div class="tight" onclick="location.href='subpages/AKN-mobile-app.html';">
+            <div class="project_image">
+              <img src="images/AKN-mobile-app/login-icon.png">
+            </div>
+            <div class="project_text">
+              <h3 class='card_title'>AKN mobile app</h3>
+              <p class="card_body">
+                Ionic2&nbspHTML5&nbspCSS3
+              </p>
+            </div>
+          </div>
+          <div class="tight vertical" onclick="location.href='subpages/RPN-calc.html';">
+            <div class="project_image">
+              <img src="images/RPN-calc/basic.png">
+            </div>
+            <div class="project_text">
+              <h3 class='card_title'>RPN calculator</h3>
+              <p class="card_body">
+                Android<br>Kotlin<br>SQLite
+              </p>
+            </div>
+          </div>
+          <div class="tight vertical" onclick="location.href='subpages/lego-app.html';">
+            <div class="project_image">
+              <img src="images/Lego-app/project-view.png">
+            </div>
+            <div class="project_text">
+              <h3 class='card_title'>Lego app</h3>
+              <p class="card_body">
+                Android<br>Kotlin<br>SQLite
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="section" id="contact">
-        <h2 class="section_header">Contact</h2>
-        <div id="contact_content">
-          <div class="contact_opacity"></div>
-          <p class="instruction">
-            Contact me via the form below or send an email to the following address: <a href="mailto:wisniowska.adrianna@gmail.com" data-tool-tip="open in your email client">wisniowska.adrianna@gmail.com</a>
-          </p>
-          <form id="gform" action="https://script.google.com/macros/s/AKfycbzaw5ElqTq4SBZDJijE0UPyg0gfgHB2yKVeF62fW6v3m6X1vt4n/exec" method="POST">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea><br>
-            <button id="send_button" class="btn btn-default pull-right" type="submit">Send</button>
-          </form>
-          <div id="thankyou_message">
-            Thanks for contacting me!
-          </div>
+    </div>
+    <div class="section" id="contact">
+      <h2 class="section_header">Contact</h2>
+      <div id="contact_content">
+        <div class="contact_opacity"></div>
+        <p class="instruction">
+          Contact me via the form below or send an email to the following address:
+          <a href="mailto:wisniowska.adrianna@gmail.com"
+            data-tool-tip="open in your email client">wisniowska.adrianna@gmail.com</a>
+        </p>
+        <form id="gform" action="https://script.google.com/macros/s/AKfycbzaw5ElqTq4SBZDJijE0UPyg0gfgHB2yKVeF62fW6v3m6X1vt4n/exec"
+          method="POST">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+          <br>
+          <button id="send_button" class="btn btn-default pull-right" type="submit">Send</button>
+        </form>
+        <div id="thankyou_message">
+          Thanks for contacting me!
         </div>
       </div>
+    </div>
   </div>
   <div class="footer">
     <p>All rights reserved. Adrianna Wisniowska 2018</p>

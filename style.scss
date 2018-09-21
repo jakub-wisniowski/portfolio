@@ -26,22 +26,22 @@ a {
   color: black;
 }
 a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0em;
-      bottom: 0em;
-      left: 0em;
-      right: 0em;
-      height: 1.5em;
-      transition: transform ease-out 250ms;
-      border-top: 1px solid $light-grey;
-      border-bottom: 1px solid $light-grey;
-      transform: scale(0, 1);
-    }
-   &:hover::before {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    height: 1.5em;
+    transition: transform ease-out 250ms;
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    transform: scale(0, 1);
+  }
+  &:hover::before {
     transform: scale(1, 1);
-   } 
+  }
 }
 .content_wrapper {
   width: 100%;
@@ -324,68 +324,96 @@ a[data-tool-tip]:hover::after {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-}
-.image_wrapper {
-  position: relative;
-  margin: 1em;
-  background-color: $blue;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 1.25em;
-    bottom: 1.25em;
-    left: 1.25em;
-    right: 1.25em;
-    transition: transform ease-out 250ms;
+  flex-direction: row;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
   }
-  &::after {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    transform: scale(0, 1);
-  }
-  &::before {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    transform: scale(1, 0);
-  }
-  &:hover::after {
-    transform: scale(1.1, 1);
-  }
-  &:hover::before {
-    transform: scale(1, 1.1);
-  }
-}
-.project_image {
-  display: block;
-  transition: opacity ease-out 250ms;
-  max-width: 300px;
-  max-height: 300px;
 }
 
-.image_wrapper:hover {
-  cursor: pointer;
+.image_container {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  @media only screen and (max-width: 750px) {
+    flex-flow: column wrap;
+  }
+
+  .tight {
+    position: relative;
+    background: $blue;
+    max-width: 300px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    .project_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      color: white;
+      transform: translate(-50%, -50%);
+      transition: opacity ease-out 250ms;
+    }
+    .card_title {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+    .card_body {
+      text-align: center;
+    }
+    &:hover .project_text {
+      opacity: 1;
+    }
+    &:hover .project_image {
+      opacity: 0.1;
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.25em;
+      bottom: 1.25em;
+      left: 1.25em;
+      right: 1.25em;
+      transition: transform ease-out 250ms;
+    }
+    &::after {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      transform: scale(0, 1);
+    }
+    &::before {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      transform: scale(1, 0);
+    }
+    &:hover::after {
+      transform: scale(1.05, 1);
+    }
+    &:hover::before {
+      transform: scale(1, 1.05);
+    }
+  }
   .project_image {
-    opacity: 0.4;
+    display: block;
+    img {
+      max-width: 300px;
+    }
   }
-}
-.project_text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  color: white;
-  transform: translate(-50%, -50%);
-  transition: opacity ease-out 250ms;
-}
-
-.image_wrapper:hover .project_text {
-  opacity: 1;
-}
-.card_title {
-  font-size: 2rem;
-  margin-bottom: 0;
+  .vertical {
+    max-width: 200px;
+    img {
+      max-width: 200px;
+    }
+  }
+  .horizontal {
+    max-width: 400px;
+    img {
+      max-width: 400px;
+    }
+  }
 }
 
 #contact {
