@@ -1,12 +1,11 @@
 @font-face {
-  font-family: "JosefinSans";
-  src: url("fonts/JosefinSans-Regular.eot");
-  src: url("fonts/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/JosefinSans-Regular.woff") format("woff"), url("fonts/JosefinSans-Regular.ttf") format("truetype"), url("fonts/JosefinSans-Regular.svg#JosefinSans") format("svg");
+  font-family: "Elegant Lux Mager";
+  src: url("fonts/ElegantLux-Mager.eot");
+  src: url("fonts/ElegantLux-Mager.eot?#iefix") format("embedded-opentype"), url("fonts/ElegantLux-Mager.woff") format("woff"), url("fonts/ElegantLux-Mager.ttf") format("truetype"), url("fonts/ElegantLux-Mager.svg#ElegantLux-Mager") format("svg");
 }
-
 body {
   background-color: white;
-  font-family: "JosefinSans", sans-serif;
+  font-family: "Elegant Lux Mager", sans-serif;
   font-weight: 600;
   font-size: 18px !important;
   position: relative;
@@ -29,19 +28,13 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   left: 0em;
   right: 0em;
   height: 1.5em;
-  -webkit-transition: -webkit-transform ease-out 250ms;
-  transition: -webkit-transform ease-out 250ms;
   transition: transform ease-out 250ms;
-  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
-  border-top: 1px solid #47454d;
-  border-bottom: 1px solid #47454d;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
+  border-top: 1px solid #474507;
+  border-bottom: 1px solid #474507;
+  transform: scale(0, 1);
 }
-
 a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control):hover::before {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .info_link a::before {
@@ -63,7 +56,6 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   z-index: 1;
   width: 100%;
 }
-
 .my_page_header .hamburger_menu {
   background-image: url(./images/icons/hamburger.png);
   width: 50px;
@@ -74,13 +66,11 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   cursor: pointer;
   background-size: cover;
 }
-
 @media only screen and (min-width: 650px) {
   .my_page_header .hamburger_menu {
     display: none;
   }
 }
-
 .my_page_header .navigation_small {
   text-align: right;
   position: absolute;
@@ -88,61 +78,48 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   right: 30px;
   background-color: #f9f9f9;
   min-width: 160px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 .my_page_header .navigation_small ul {
   list-style: none;
   padding: 0px;
 }
-
 .my_page_header .navigation_small ul li {
   padding: 5px;
   font-size: 120%;
 }
-
 .my_page_header .navigation_small ul li:hover {
   background: #00abca;
 }
-
 .my_page_header .navigation_small ul li a {
   display: block;
 }
-
 .my_page_header .navigation_small ul li a:hover {
   color: white;
 }
-
 @media only screen and (min-width: 650px) {
   .my_page_header .navigation_small {
     display: none;
   }
 }
-
 .my_page_header .navigation {
   position: relative;
   text-align: right;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .my_page_header .navigation li {
   display: inline-block;
   padding: 0px 5px;
 }
-
 .my_page_header .navigation li a {
   position: relative;
 }
-
 .my_page_header .navigation li a::before {
-  border-top: 2px solid #47454d !important;
-  border-bottom: 2px solid #47454d !important;
+  border-top: 2px solid #474507 !important;
+  border-bottom: 2px solid #474507 !important;
 }
-
 @media only screen and (max-width: 650px) {
   .my_page_header .navigation {
     display: none;
@@ -156,7 +133,6 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   margin: 0px;
   padding: 0px;
 }
-
 .banner .banner_bg_opacity {
   opacity: 0.3;
   background-image: url(./images/background/banner.png);
@@ -168,7 +144,6 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   background-position: left bottom;
   position: absolute;
 }
-
 .banner .my_name {
   position: relative;
   text-align: center;
@@ -176,17 +151,14 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   padding: 70vh 50px;
   bottom: 140px;
 }
-
 .banner .my_places {
   display: block;
   position: relative;
   text-align: center;
   margin: 0 auto;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .banner .shortcut_img {
   display: inline-block;
   position: relative;
@@ -194,86 +166,66 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   height: 62px;
   width: 62px;
 }
-
 .banner .shortcut_img img {
   width: 100%;
   height: auto;
 }
-
 .banner .shortcut_img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 @media only screen and (max-width: 1300px) {
   .banner .shortcut_img {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
   .banner .shortcut_img:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @media only screen and (max-width: 1100px) {
   .banner .shortcut_img {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
   .banner .shortcut_img:hover {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
   }
 }
-
 @media only screen and (max-width: 700px) {
   .banner .shortcut_img {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    transform: scale(0.75);
   }
   .banner .shortcut_img:hover {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
+    transform: scale(0.85);
   }
 }
-
 @media only screen and (max-width: 480px) {
   .banner .shortcut_img {
-    -webkit-transform: scale(0.65);
-            transform: scale(0.65);
+    transform: scale(0.65);
   }
   .banner .shortcut_img:hover {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    transform: scale(0.75);
   }
 }
-
 .banner .my_places_center {
   position: absolute;
   width: 100%;
   height: 50px;
   bottom: 60px;
 }
-
 @media only screen and (max-width: 1300px) {
   .banner .my_places_center {
     bottom: 75px;
   }
 }
-
 @media only screen and (max-width: 1100px) {
   .banner .my_places_center {
     bottom: 75px;
   }
 }
-
 @media only screen and (max-width: 700px) {
   .banner .my_places_center {
     bottom: 50px;
   }
 }
-
 @media only screen and (max-width: 480px) {
   .banner .my_places_center {
     bottom: 45px;
@@ -301,7 +253,6 @@ h2.section_header {
   text-align: center;
   margin-top: 0px;
 }
-
 h2.section_header::after, h2.section_header::before {
   content: "";
   height: 100%;
@@ -310,15 +261,12 @@ h2.section_header::after, h2.section_header::before {
   width: 100vw;
   left: 50%;
   top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 h2.section_header::before {
   z-index: -2;
   background-color: white;
 }
-
 h2.section_header::after {
   z-index: -1;
   background-color: #00abca;
@@ -382,68 +330,39 @@ a[data-tool-tip]::after {
   color: white;
   border-radius: 5px;
   padding: 1em 1em;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
-  transition: bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
-  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
-  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms, -webkit-transform ease-out 150ms;
+  transform: scale(0);
+  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
 }
 
 a[data-tool-tip]:hover::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   bottom: 100%;
   left: 0;
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 10px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media only screen and (max-width: 1200px) {
   .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .image_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-
 @media only screen and (max-width: 750px) {
   .image_container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+    flex-flow: column wrap;
   }
 }
-
 .image_container .tight {
   position: relative;
   background: #00abca;
@@ -452,36 +371,28 @@ a[data-tool-tip]:hover::after {
   margin-left: 40px;
   cursor: pointer;
 }
-
 .image_container .tight .project_text {
   position: absolute;
   top: 50%;
   left: 50%;
   opacity: 0;
   color: white;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: opacity ease-out 250ms;
+  transform: translate(-50%, -50%);
   transition: opacity ease-out 250ms;
 }
-
 .image_container .tight .card_title {
   font-size: 2rem;
   margin-bottom: 0;
 }
-
 .image_container .tight .card_body {
   text-align: center;
 }
-
 .image_container .tight:hover .project_text {
   opacity: 1;
 }
-
 .image_container .tight:hover .project_image {
   opacity: 0.1;
 }
-
 .image_container .tight::after, .image_container .tight::before {
   content: "";
   position: absolute;
@@ -489,56 +400,39 @@ a[data-tool-tip]:hover::after {
   bottom: 1.25em;
   left: 1.25em;
   right: 1.25em;
-  -webkit-transition: -webkit-transform ease-out 250ms;
-  transition: -webkit-transform ease-out 250ms;
   transition: transform ease-out 250ms;
-  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
 }
-
 .image_container .tight::after {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
+  transform: scale(0, 1);
 }
-
 .image_container .tight::before {
   border-left: 1px solid white;
   border-right: 1px solid white;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
+  transform: scale(1, 0);
 }
-
 .image_container .tight:hover::after {
-  -webkit-transform: scale(1.05, 1);
-          transform: scale(1.05, 1);
+  transform: scale(1.05, 1);
 }
-
 .image_container .tight:hover::before {
-  -webkit-transform: scale(1, 1.05);
-          transform: scale(1, 1.05);
+  transform: scale(1, 1.05);
 }
-
 .image_container .project_image {
   display: block;
 }
-
 .image_container .project_image img {
   max-width: 300px;
 }
-
 .image_container .vertical {
   max-width: 200px;
 }
-
 .image_container .vertical img {
   max-width: 200px;
 }
-
 .image_container .horizontal {
   max-width: 400px;
 }
-
 .image_container .horizontal img {
   max-width: 400px;
 }
@@ -550,7 +444,6 @@ a[data-tool-tip]:hover::after {
   margin: 0px;
   padding: 0px;
 }
-
 #contact .contact_opacity {
   opacity: 0.3;
   background-image: url(./images/background/keyboard.jpg);
@@ -577,7 +470,7 @@ a[data-tool-tip]:hover::after {
 }
 
 #send_button {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .footer {
@@ -585,7 +478,6 @@ a[data-tool-tip]:hover::after {
   clear: both;
   font-size: 80%;
 }
-
 .footer p {
   text-align: center;
   position: relative;
@@ -598,11 +490,14 @@ a[data-tool-tip]:hover::after {
     text-align: center !important;
     padding: 5%;
   }
+
   a[data-tool-tip]:hover::after {
     white-space: normal;
   }
+
   .bio_text {
     padding-top: 0;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

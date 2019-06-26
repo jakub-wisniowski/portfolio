@@ -6,11 +6,12 @@
   <title>Jakub Wiśniowski</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Jakub Wiśniowski Junior Frontend Developer">
-  <meta name="keywords" content="Jakub Wiśniowski, Front-end developer, Angular, AngularJS, Angular2+">
+  <meta name="keywords" content="Jakub Wiśniowski, Front-end developer, Angular, AngularJS, Angular2+, Dart, Typescript">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel='icon' href='images/icons/favicon.ico' type='image/x-icon'/>
 </head>
 
 <body>
@@ -19,13 +20,13 @@
       <div class="hamburger_menu" data-toggle="collapse" data-target="#nav"></div>
       <div id="nav" class="navigation_small collapse">
         <ul>
-          <li id="button_about">
+          <li id="button_about_small">
             <a class="navigation_link_small" href="#about" data-toggle="collapse" data-target="#nav">ABOUT</a>
           </li>
-          <li id="button_projects">
+          <li id="button_projects_small">
             <a class="navigation_link_small" href="#projects" data-toggle="collapse" data-target="#nav">PROJECTS</a>
           </li>
-          <li id="button_contact">
+          <li id="button_contact_small">
             <a class="navigation_link_small" href="#contact" data-toggle="collapse" data-target="#nav">CONTACT</a>
           </li>
         </ul>
@@ -45,7 +46,7 @@
     <div class="banner">
       <div class="banner_bg_opacity"></div>
       <div class="my_name">
-        <h1>JAKUB WISNIOWSKI</h1>
+        <h1>JAKUB WIŚNIOWSKI</h1>
         <h2>JUNIOR FRONT-END DEVELOPER</h2>
       </div>
       <div class="my_places_center">
@@ -170,15 +171,13 @@
         <div class="contact_opacity"></div>
         <p class="instruction">
           Contact me via the form below or send an email to the following address:
-          <a href="mailto:wisniowska.adrianna@gmail.com"
-            data-tool-tip="open in your email client">wisniowska.adrianna@gmail.com</a>
+          <a href="mailto:jakub.m.wisniowski@gmail.com"
+            data-tool-tip="open in your email client">jakub.m.wisniowski@gmail.com</a>
         </p>
-        <form id="gform" action="https://script.google.com/macros/s/AKfycbzaw5ElqTq4SBZDJijE0UPyg0gfgHB2yKVeF62fW6v3m6X1vt4n/exec"
-          method="POST">
+        <form method="POST" action="http://formspree.io/jakub.m.wisniowski@gmail.com">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
-          <br>
+          <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
           <button id="send_button" class="btn btn-default pull-right" type="submit">Send</button>
         </form>
         <div id="thankyou_message">
@@ -188,8 +187,7 @@
     </div>
   </div>
   <div class="footer">
-    <p>all rights reserved. Jakub Wisniowski 2018</p>
+    <p>All rights reserved. Jakub Wiśniowski 2018</p>
   </div>
-  <script data-cfasync="false" type="text/javascript" src="scripts/form-submission-handler.js"></script>
 </body>
 <html>

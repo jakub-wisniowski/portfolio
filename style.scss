@@ -1,17 +1,17 @@
 $blue: #00abca;
-$light-grey: rgb(71, 69, 77);
+$light-grey: rgb(71, 69, 7);
 @font-face {
-  font-family: "JosefinSans";
-  src: url("fonts/JosefinSans-Regular.eot");
-  src: url("fonts/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"),
-    url("fonts/JosefinSans-Regular.woff") format("woff"),
-    url("fonts/JosefinSans-Regular.ttf") format("truetype"),
-    url("fonts/JosefinSans-Regular.svg#JosefinSans") format("svg");
+  font-family: "Elegant Lux Mager";
+  src: url("fonts/ElegantLux-Mager.eot");
+  src: url("fonts/ElegantLux-Mager.eot?#iefix") format("embedded-opentype"),
+    url("fonts/ElegantLux-Mager.woff") format("woff"),
+    url("fonts/ElegantLux-Mager.ttf") format("truetype"),
+    url("fonts/ElegantLux-Mager.svg#ElegantLux-Mager") format("svg");
 }
 
 body {
   background-color: white;
-  font-family: "JosefinSans", sans-serif;
+  font-family: "Elegant Lux Mager", sans-serif;
   font-weight: 600;
   font-size: 18px !important;
   position: relative;
@@ -452,7 +452,7 @@ a[data-tool-tip]:hover::after {
   margin-bottom: 20px;
 }
 #send_button {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 .footer {
   width: 100%;
