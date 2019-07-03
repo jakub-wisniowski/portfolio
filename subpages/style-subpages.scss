@@ -7,7 +7,7 @@ $link-font: 20px;
   }
 }
 .go_back {
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 .home {
@@ -16,16 +16,22 @@ $link-font: 20px;
     height: 40px;
     position: absolute;
     left: 30px;
-    top: 16px;
+    top: 26px;
     background-size: cover;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: 730px) {
       display: none;
     }
 }
 .arrow {
   position: relative;
-  top: 35px;
-  @media only screen and (max-width: 650px) {
+  top: 20px;
+  left: 70px;
+  .glyphicon {
+    top: 8px;
+    margin-right: 20px;
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 730px) {
     display: none;
   }
 }
@@ -72,6 +78,9 @@ $link-font: 20px;
   left: 0;
   right: 0;
   margin: auto;
+  border: 5px solid $blue;
+  display: block;
+  border-radius: 5px;
 }
 .carousel-control:hover {
   color: $blue;

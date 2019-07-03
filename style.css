@@ -6,12 +6,9 @@
 body {
   background-color: white;
   font-family: "Elegant Lux Mager", sans-serif;
-  font-weight: 600;
-  font-size: 18px !important;
+  font-size: 18px;
   position: relative;
-  width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  min-width: 300px;
 }
 
 a {
@@ -23,11 +20,10 @@ a {
 a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control)::before {
   content: "";
   position: absolute;
-  top: 0em;
-  bottom: 0em;
-  left: 0em;
-  right: 0em;
-  height: 1.5em;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 2em;
   transition: transform ease-out 250ms;
   border-top: 1px solid #474507;
   border-bottom: 1px solid #474507;
@@ -50,9 +46,10 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
 
 .my_page_header {
   display: inline-block;
-  height: 70px;
   position: absolute;
-  top: 0px;
+  top: 0;
+  opacity: 0.8;
+  background: #00abca;
   z-index: 1;
   width: 100%;
 }
@@ -74,29 +71,36 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
 .my_page_header .navigation_small {
   text-align: right;
   position: absolute;
-  top: 72px;
+  top: 80px;
   right: 30px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  opacity: 0.8;
 }
 .my_page_header .navigation_small ul {
   list-style: none;
-  padding: 0px;
+  padding: 0;
+  margin-bottom: 0;
+  background: #00abca;
+  border: 2px solid black;
+  border-bottom: 1px solid black;
 }
 .my_page_header .navigation_small ul li {
   padding: 5px;
   font-size: 120%;
+  border-bottom: 1px solid black;
 }
 .my_page_header .navigation_small ul li:hover {
   background: #00abca;
 }
 .my_page_header .navigation_small ul li a {
   display: block;
+  color: white;
 }
 .my_page_header .navigation_small ul li a:hover {
-  color: white;
+  color: black;
 }
 @media only screen and (min-width: 650px) {
   .my_page_header .navigation_small {
@@ -105,13 +109,12 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
 }
 .my_page_header .navigation {
   position: relative;
-  text-align: right;
-  top: 50%;
-  transform: translateY(-50%);
+  text-align: center;
+  padding: 30px 0;
 }
 .my_page_header .navigation li {
   display: inline-block;
-  padding: 0px 5px;
+  width: 30%;
 }
 .my_page_header .navigation li a {
   position: relative;
@@ -119,6 +122,9 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
 .my_page_header .navigation li a::before {
   border-top: 2px solid #474507 !important;
   border-bottom: 2px solid #474507 !important;
+}
+.my_page_header .navigation li a:hover {
+  color: white;
 }
 @media only screen and (max-width: 650px) {
   .my_page_header .navigation {
@@ -141,14 +147,14 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: left bottom;
+  background-position: center;
   position: absolute;
 }
 .banner .my_name {
   position: relative;
   text-align: center;
   margin: 0px;
-  padding: 70vh 50px;
+  padding: 50vh 50px;
   bottom: 140px;
 }
 .banner .my_places {
@@ -232,15 +238,22 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   }
 }
 
-.section {
+section {
   clear: both;
   text-align: center;
 }
+section .container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 
 form {
-  padding: 0% 10%;
+  padding: 0 10%;
   margin-top: 2%;
   opacity: 0.9;
+}
+form .form-control {
+  margin-bottom: 10px;
 }
 
 h2.section_header {
@@ -251,17 +264,17 @@ h2.section_header {
   white-space: nowrap;
   width: 100%;
   text-align: center;
-  margin-top: 0px;
+  margin: 0;
+  height: 100px;
+  line-height: 100px;
 }
 h2.section_header::after, h2.section_header::before {
   content: "";
   height: 100%;
   position: absolute;
   display: block;
-  width: 100vw;
-  left: 50%;
+  width: 100%;
   top: 0;
-  transform: translateX(-50%);
 }
 h2.section_header::before {
   z-index: -2;
@@ -272,22 +285,22 @@ h2.section_header::after {
   background-color: #00abca;
 }
 
-.bio_wrap {
+#bio_wrap {
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 0;
 }
 
 .bio {
-  float: left;
   width: 40%;
-  margin-bottom: 10px;
 }
 
 .bio + .bio {
   text-align: left;
   width: 60%;
-  position: relative;
-  top: 20px;
-  margin-bottom: 1%;
 }
 
 .profile_picture {
@@ -302,12 +315,9 @@ p {
   text-align: justify;
 }
 
-.bio_text p {
-  font-weight: 900;
-}
-
 .instruction {
   text-align: center;
+  padding-top: 50px;
 }
 
 a:hover {
@@ -335,9 +345,10 @@ a[data-tool-tip]::after {
 }
 
 a[data-tool-tip]:hover::after {
-  transform: scale(1);
-  bottom: 100%;
-  left: 0;
+  transform: scale(1) translate(-50%);
+  left: 50%;
+  bottom: 150%;
+  min-width: 170px;
 }
 
 .row {
@@ -357,19 +368,22 @@ a[data-tool-tip]:hover::after {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding: 50px 0;
 }
 @media only screen and (max-width: 750px) {
   .image_container {
     flex-flow: column wrap;
   }
 }
+.image_container .tight-wrapper {
+  min-width: 50%;
+}
 .image_container .tight {
   position: relative;
   background: #00abca;
   max-width: 300px;
-  margin-bottom: 20px;
-  margin-left: 40px;
   cursor: pointer;
+  margin: 20px auto;
 }
 .image_container .tight .project_text {
   position: absolute;
@@ -420,45 +434,39 @@ a[data-tool-tip]:hover::after {
 }
 .image_container .project_image {
   display: block;
+  border: 5px solid #00abca;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .image_container .project_image img {
-  max-width: 300px;
+  max-width: 100%;
 }
 .image_container .vertical {
   max-width: 200px;
-}
-.image_container .vertical img {
-  max-width: 200px;
-}
-.image_container .horizontal {
-  max-width: 400px;
-}
-.image_container .horizontal img {
-  max-width: 400px;
 }
 
 #contact {
   position: relative;
   width: 100%;
-  height: 70vh;
-  margin: 0px;
-  padding: 0px;
+  height: 700px;
+  margin: 0;
+  padding: 0;
 }
 #contact .contact_opacity {
   opacity: 0.3;
   background-image: url(./images/background/keyboard.jpg);
   width: 100%;
   height: 100%;
+  top: 70px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: left bottom;
+  background-position: center;
   position: absolute;
-  margin-top: -10px;
   z-index: -1;
 }
 
-#thankyou_message {
+#thank-you-message {
   display: none;
   color: black;
   clear: both;
@@ -467,10 +475,6 @@ a[data-tool-tip]:hover::after {
   border-radius: 5px;
   white-space: nowrap;
   margin-bottom: 20px;
-}
-
-#send_button {
-  margin: 10px 0;
 }
 
 .footer {
