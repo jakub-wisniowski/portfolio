@@ -17,7 +17,7 @@ a {
   color: black;
 }
 
-a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control)::before {
+.border-link::before {
   content: "";
   position: absolute;
   top: -6px;
@@ -29,18 +29,13 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   border-bottom: 1px solid #474507;
   transform: scale(0, 1);
 }
-a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-control):hover::before {
+.border-link:hover::before {
   transform: scale(1, 1);
-}
-
-.info_link a::before {
-  border-top: 0px !important;
-  border-bottom: 0px !important;
 }
 
 .content_wrapper {
   width: 100%;
-  padding: 0px;
+  padding: 0;
   min-height: 100vh;
 }
 
@@ -75,7 +70,7 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   right: 30px;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
   opacity: 0.8;
 }
@@ -136,8 +131,8 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
   position: relative;
   width: 100%;
   height: 100vh;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 .banner .banner_bg_opacity {
   opacity: 0.3;
@@ -153,7 +148,7 @@ a:not(.shortcut_img):not(.navigation_link_small):not(.go_back):not(.carousel-con
 .banner .my_name {
   position: relative;
   text-align: center;
-  margin: 0px;
+  margin: 0;
   padding: 50vh 50px;
   bottom: 140px;
 }
@@ -286,7 +281,6 @@ h2.section_header::after {
 }
 
 #bio_wrap {
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -363,7 +357,7 @@ a[data-tool-tip]:hover::after {
   }
 }
 
-.image_container {
+.projects_container {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
@@ -371,21 +365,21 @@ a[data-tool-tip]:hover::after {
   padding: 50px 0;
 }
 @media only screen and (max-width: 750px) {
-  .image_container {
+  .projects_container {
     flex-flow: column wrap;
   }
 }
-.image_container .tight-wrapper {
+.projects_container .flex-wrapper {
   min-width: 50%;
 }
-.image_container .tight {
+.projects_container .tight {
   position: relative;
   background: #00abca;
   max-width: 300px;
   cursor: pointer;
   margin: 20px auto;
 }
-.image_container .tight .project_text {
+.projects_container .tight .project_text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -394,20 +388,20 @@ a[data-tool-tip]:hover::after {
   transform: translate(-50%, -50%);
   transition: opacity ease-out 250ms;
 }
-.image_container .tight .card_title {
+.projects_container .tight .card_title {
   font-size: 2rem;
   margin-bottom: 0;
 }
-.image_container .tight .card_body {
+.projects_container .tight .card_body {
   text-align: center;
 }
-.image_container .tight:hover .project_text {
+.projects_container .tight:hover .project_text {
   opacity: 1;
 }
-.image_container .tight:hover .project_image {
+.projects_container .tight:hover .project_image {
   opacity: 0.1;
 }
-.image_container .tight::after, .image_container .tight::before {
+.projects_container .tight::after, .projects_container .tight::before {
   content: "";
   position: absolute;
   top: 1.25em;
@@ -416,32 +410,32 @@ a[data-tool-tip]:hover::after {
   right: 1.25em;
   transition: transform ease-out 250ms;
 }
-.image_container .tight::after {
+.projects_container .tight::after {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   transform: scale(0, 1);
 }
-.image_container .tight::before {
+.projects_container .tight::before {
   border-left: 1px solid white;
   border-right: 1px solid white;
   transform: scale(1, 0);
 }
-.image_container .tight:hover::after {
+.projects_container .tight:hover::after {
   transform: scale(1.05, 1);
 }
-.image_container .tight:hover::before {
+.projects_container .tight:hover::before {
   transform: scale(1, 1.05);
 }
-.image_container .project_image {
+.projects_container .project_image {
   display: block;
   border: 5px solid #00abca;
   border-radius: 10px;
   overflow: hidden;
 }
-.image_container .project_image img {
+.projects_container .project_image img {
   max-width: 100%;
 }
-.image_container .vertical {
+.projects_container .vertical {
   max-width: 200px;
 }
 
@@ -485,6 +479,7 @@ a[data-tool-tip]:hover::after {
 .footer p {
   text-align: center;
   position: relative;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 650px) {
