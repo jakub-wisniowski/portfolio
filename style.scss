@@ -1,5 +1,7 @@
 $blue: #00abca;
 $light-grey: rgb(71, 69, 7);
+$yellow: #F9F871;
+
 @font-face {
 	font-family: "Elegant Lux Mager";
 	src: url("fonts/ElegantLux-Mager.eot");
@@ -23,7 +25,36 @@ a {
 	color: black;
 }
 
+a:hover {
+	text-decoration: none;
+	color: $blue;
+}
+
+a[data-tool-tip]::after {
+	content: attr(data-tool-tip);
+	position: absolute;
+	white-space: nowrap;
+	bottom: 0;
+	left: -100%;
+	font-size: 0.8em;
+	background-color: grey;
+	color: white;
+	border-radius: 5px;
+	padding: 1em 1em;
+	transform: scale(0);
+	transition: transform ease-out 150ms, bottom ease-out 150ms,
+	left ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after, a[data-tool-tip]:focus::after {
+	transform: scale(1) translate(-50%);
+	left: 50%;
+	bottom: 150%;
+	min-width: 170px;
+}
+
 .border-link {
+	position: relative;
 	&::before {
 		content: "";
 		position: absolute;
@@ -37,8 +68,14 @@ a {
 		transform: scale(0, 1);
 	}
 
-	&:hover::before {
+	&:hover::before, &:focus::before {
 		transform: scale(1, 1);
+	}
+
+	&:focus {
+		outline: none;
+		color: black;
+		text-decoration: none;
 	}
 }
 
@@ -317,6 +354,10 @@ h2.section_header {
 .bio + .bio {
 	text-align: left;
 	width: 60%;
+
+	p {
+		text-align: justify;
+	}
 }
 
 .profile_picture {
@@ -327,45 +368,9 @@ h2.section_header {
 	border: 7px solid $blue;
 }
 
-p {
-	text-align: justify;
-}
-
 .instruction {
 	text-align: center;
 	padding-top: 50px;
-}
-
-a:hover {
-	text-decoration: none;
-	color: $blue;
-}
-
-a[data-tool-tip] {
-	position: relative;
-}
-
-a[data-tool-tip]::after {
-	content: attr(data-tool-tip);
-	position: absolute;
-	white-space: nowrap;
-	bottom: 0;
-	left: -100%;
-	font-size: 0.8em;
-	background-color: grey;
-	color: white;
-	border-radius: 5px;
-	padding: 1em 1em;
-	transform: scale(0);
-	transition: transform ease-out 150ms, bottom ease-out 150ms,
-	left ease-out 150ms;
-}
-
-a[data-tool-tip]:hover::after {
-	transform: scale(1) translate(-50%);
-	left: 50%;
-	bottom: 150%;
-	min-width: 170px;
 }
 
 .row {
@@ -394,6 +399,7 @@ a[data-tool-tip]:hover::after {
 	}
 
 	.tight {
+		display: block;
 		position: relative;
 		background: $blue;
 		max-width: 300px;
@@ -419,11 +425,11 @@ a[data-tool-tip]:hover::after {
 			text-align: center;
 		}
 
-		&:hover .project_text {
+		&:hover .project_text, &:focus .project_text {
 			opacity: 1;
 		}
 
-		&:hover .project_image {
+		&:hover .project_image, &:focus .project_image {
 			opacity: 0.1;
 		}
 
@@ -450,11 +456,11 @@ a[data-tool-tip]:hover::after {
 			transform: scale(1, 0);
 		}
 
-		&:hover::after {
+		&:hover::after, &:focus::after {
 			transform: scale(1.05, 1);
 		}
 
-		&:hover::before {
+		&:hover::before, &:focus::before {
 			transform: scale(1, 1.05);
 		}
 	}

@@ -1,5 +1,5 @@
 function toggleText() {
-    var x = document.getElementById("text");
+    let x = document.getElementById("text");
     if (x.innerHTML == "Show more info"){
       x.innerHTML = "Hide info";
     }

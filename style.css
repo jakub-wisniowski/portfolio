@@ -17,6 +17,36 @@ a {
   color: black;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #00abca;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  position: absolute;
+  white-space: nowrap;
+  bottom: 0;
+  left: -100%;
+  font-size: 0.8em;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  padding: 1em 1em;
+  transform: scale(0);
+  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after, a[data-tool-tip]:focus::after {
+  transform: scale(1) translate(-50%);
+  left: 50%;
+  bottom: 150%;
+  min-width: 170px;
+}
+
+.border-link {
+  position: relative;
+}
 .border-link::before {
   content: "";
   position: absolute;
@@ -29,8 +59,13 @@ a {
   border-bottom: 1px solid #474507;
   transform: scale(0, 1);
 }
-.border-link:hover::before {
+.border-link:hover::before, .border-link:focus::before {
   transform: scale(1, 1);
+}
+.border-link:focus {
+  outline: none;
+  color: black;
+  text-decoration: none;
 }
 
 .content_wrapper {
@@ -296,6 +331,9 @@ h2.section_header::after {
   text-align: left;
   width: 60%;
 }
+.bio + .bio p {
+  text-align: justify;
+}
 
 .profile_picture {
   width: 200px;
@@ -305,44 +343,9 @@ h2.section_header::after {
   border: 7px solid #00abca;
 }
 
-p {
-  text-align: justify;
-}
-
 .instruction {
   text-align: center;
   padding-top: 50px;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #00abca;
-}
-
-a[data-tool-tip] {
-  position: relative;
-}
-
-a[data-tool-tip]::after {
-  content: attr(data-tool-tip);
-  position: absolute;
-  white-space: nowrap;
-  bottom: 0;
-  left: -100%;
-  font-size: 0.8em;
-  background-color: grey;
-  color: white;
-  border-radius: 5px;
-  padding: 1em 1em;
-  transform: scale(0);
-  transition: transform ease-out 150ms, bottom ease-out 150ms, left ease-out 150ms;
-}
-
-a[data-tool-tip]:hover::after {
-  transform: scale(1) translate(-50%);
-  left: 50%;
-  bottom: 150%;
-  min-width: 170px;
 }
 
 .row {
@@ -373,6 +376,7 @@ a[data-tool-tip]:hover::after {
   min-width: 50%;
 }
 .projects_container .tight {
+  display: block;
   position: relative;
   background: #00abca;
   max-width: 300px;
@@ -395,10 +399,10 @@ a[data-tool-tip]:hover::after {
 .projects_container .tight .card_body {
   text-align: center;
 }
-.projects_container .tight:hover .project_text {
+.projects_container .tight:hover .project_text, .projects_container .tight:focus .project_text {
   opacity: 1;
 }
-.projects_container .tight:hover .project_image {
+.projects_container .tight:hover .project_image, .projects_container .tight:focus .project_image {
   opacity: 0.1;
 }
 .projects_container .tight::after, .projects_container .tight::before {
@@ -420,10 +424,10 @@ a[data-tool-tip]:hover::after {
   border-right: 1px solid white;
   transform: scale(1, 0);
 }
-.projects_container .tight:hover::after {
+.projects_container .tight:hover::after, .projects_container .tight:focus::after {
   transform: scale(1.05, 1);
 }
-.projects_container .tight:hover::before {
+.projects_container .tight:hover::before, .projects_container .tight:focus::before {
   transform: scale(1, 1.05);
 }
 .projects_container .project_image {
