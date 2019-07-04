@@ -55,19 +55,19 @@
 		<div class="my_places_center">
 			<div class="my_places">
 				<a href="https://github.com/jakub-wisniowski" data-tool-tip="Github profile" target="-blank" class="shortcut_img">
-					<img src="images/icons/github.png"/>
+					<img src="images/icons/github.png" alt="Github profile"/>
 				</a>
 				<a href="https://www.linkedin.com/in/jakub-m-wisniowski/" data-tool-tip="LinkedIn profile" target="-blank" class="shortcut_img">
-					<img src="images/icons/linkedin.png"/>
+					<img src="images/icons/linkedin.png" alt="LinkedIn profile"/>
 				</a>
 			</div>
 		</div>
 	</section>
 	<section id="about">
-		<h2 class="section_header">About me</h2>
+		<h3 class="section_header">About me</h3>
 		<div class="container" id="bio_wrap">
 			<div class="bio">
-				<img class="profile_picture" src="images/profile.png"/>
+				<img class="profile_picture" src="images/profile.png" alt="Profile picture"/>
 			</div>
 			<div class="bio">
 				<div class="bio_text">
@@ -96,12 +96,12 @@
 		</div>
 	</section>
 	<section id="projects">
-		<h2 class="section_header">Projects</h2>
+		<h3 class="section_header">Projects</h3>
 		<div class="container projects_container">
 			<div class="flex-wrapper">
 				<a class="tight" href="subpages/home-library.html">
 					<div class="project_image">
-						<img src="images/Home%20library/home-library-icon.png">
+						<img src="images/Home%20library/home-library-icon.png" alt="Home library project">
 					</div>
 					<div class="project_text">
 						<h3 class='card_title'>Home library</h3>
@@ -114,7 +114,7 @@
 			<div class="flex-wrapper">
 				<a class="tight" href='subpages/planets.html'>
 					<div class="project_image">
-						<img src="images/planets/list-view.png">
+						<img src="images/planets/list-view.png" alt="Planets project">
 					</div>
 					<div class="project_text">
 						<h3 class='card_title'>Planets</h3>
@@ -128,7 +128,7 @@
 			<div class="flex-wrapper">
 				<a class="tight" href='subpages/AKN-web-app.html'>
 					<div class="project_image">
-						<img src="images/AKN-web-app/modify-account.png">
+						<img src="images/AKN-web-app/modify-account.png" alt="AKN web project">
 					</div>
 					<div class="project_text">
 						<h3 class='card_title'>AKN webapp</h3>
@@ -139,7 +139,7 @@
 				</a>
 			</div>
 			<div class="flex-wrapper">
-				<a class="tight" href='subpages/AKN-mobile-app.html'>
+				<a class="tight" href='subpages/AKN-mobile-app.html' alt="AKN mobile project">
 					<div class="project_image">
 						<img src="images/AKN-mobile-app/login-icon.png">
 					</div>
@@ -152,7 +152,7 @@
 				</a>
 			</div>
 			<div class="flex-wrapper">
-				<a class="tight vertical" href='subpages/RPN-calc.html'>
+				<a class="tight vertical" href='subpages/RPN-calc.html' alt="RPN project">
 					<div class="project_image">
 						<img src="images/RPN-calc/basic.png">
 					</div>
@@ -165,7 +165,7 @@
 				</a>
 			</div>
 			<div class="flex-wrapper">
-				<a class="tight vertical" href='subpages/lego-app.html'>
+				<a class="tight vertical" href='subpages/lego-app.html' alt="LEGO project">
 					<div class="project_image">
 						<img src="images/Lego-app/project-view.png">
 					</div>
@@ -177,12 +177,11 @@
 					</div>
 				</a>
 			</div>
-
 		</div>
 	</section>
 	<section id="contact">
 		<div class="contact_opacity"></div>
-		<h2 class="section_header">Contact</h2>
+		<h3 class="section_header">Contact</h3>
 		<div class="container">
 			<p class="instruction">
 				Contact me via the form below or send an email to the following address:
@@ -191,8 +190,11 @@
 				   data-tool-tip="open in your email client">jakub.m.wisniowski@gmail.com</a>
 			</p>
 			<form id="contact-form" method="POST" action="http://formspree.io/jakub.m.wisniowski@gmail.com" onchange="handleFormChanged()" >
+				<label for="name">Name</label>
 				<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+				<label for="email">Email</label>
 				<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+				<label for="message">Your message</label>
 				<textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
 				<button id="send-button" class="btn btn-default pull-right" type="submit">Send</button>
 			</form>
