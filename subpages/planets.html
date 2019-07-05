@@ -1,125 +1,116 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Planets</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="../style.css">
-  <link rel="stylesheet" type="text/css" href="style-subpages.css">
+	<meta charset="utf-8">
+	<title>Planets</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="style-subpages.css">
 
 </head>
 
 <body>
-  <div class="subpage_wrapper">
-    <a href="../index.html" class="btn go_back">
-      <span class="home"></span>
-      <span class="arrow">
+<div class="subpage_wrapper">
+	<a href="../index.html" class="btn go_back">
+		<span class="home"></span>
+		<span class="arrow">
           <span class="glyphicon glyphicon-arrow-left"></span> Return to homepage
       </span>
-    </a>
-    <h1 class="section_header">Planets</h1>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	</a>
 
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-      </ol>
+	<h1 class="section_header">Planets</h1>
 
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="../images/planets/list-view.png" alt="list view">
-        </div>
+	<div class="slides">
+		<img class="slide" src="../images/planets/list-view.png" alt="list view" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/search.png" alt="search view">
-        </div>
+		<img class="slide" src="../images/planets/search.png" alt="search view" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/sorted.png" alt="column sorted after clicking the header">
-        </div>
+		<img class="slide" src="../images/planets/sorted.png" alt="column sorted after clicking the header" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/edit.png" alt="edit row view">
-        </div>
+		<img class="slide" src="../images/planets/edit.png" alt="edit row view" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/add-character.png" alt="add character view">
-        </div>
+		<img class="slide" src="../images/planets/add-character.png" alt="add character view" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/validation.png" alt="validation">
-        </div>
+		<img class="slide" src="../images/planets/validation.png" alt="validation" onclick="showImage()">
 
-        <div class="item">
-          <img src="../images/planets/error.png" alt="error view">
-        </div>
-      </div>
+		<img class="slide" src="../images/planets/error.png" alt="error view" onclick="showImage()">
+		<div class="slide-nav-container">
+			<span class="glyphicon glyphicon-chevron-left arrow-left" onclick="plusDivs(-1)"></span>
+			<span class="glyphicon glyphicon-chevron-right arrow-right" onclick="plusDivs(1)"></span>
+			<span class="slide-badge" onclick="currentDiv(1)"></span>
+			<span class="slide-badge" onclick="currentDiv(2)"></span>
+			<span class="slide-badge" onclick="currentDiv(3)"></span>
+			<span class="slide-badge" onclick="currentDiv(4)"></span>
+			<span class="slide-badge" onclick="currentDiv(5)"></span>
+			<span class="slide-badge" onclick="currentDiv(6)"></span>
+			<span class="slide-badge" onclick="currentDiv(7)"></span>
+		</div>
+	</div>
 
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <div class="info_link">
-      <button data-toggle="collapse" onclick="toggleText()" data-target="#intro" id="text">Show more info</button>
-    </div>
-    <div id="intro" class="intro collapse section-body">
-      <div class="description">
-        <p>
-          This app visualises assets from the Star Wars API. Allows users to sort assets by attributes when clicking table's header.
-          The webpage uses pagination and allows users to modify characters' data. User can also add a new character via
-          a form with validation set for every field.
-        </p>
-      </div>
-      <hr>
-      <div class="technologies">
-        <div class="technologies">
-          <div class="row">
-            <img class="icon" src='../images/icons/angular.png'  aria-hidden="true"/> Angular
-          </div>
-          <div class="row">
-            <img class="icon" src='../images/icons/bootstrap.png'  aria-hidden="true"/> Bootstrap
-          </div>
-          <div class="row">
-            <img class="icon" src='../images/icons/html5.png'  aria-hidden="true"/> HTML5
-          </div>
-          <div class="row">
-            <img class="icon" src='../images/icons/css3.png'  aria-hidden="true"/> CSS3
-          </div>
-          <div class="row">
-            <img class="icon" src='../images/icons/jasmine.png'  aria-hidden="true"/> Jasmine
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="experience">
-        <p>
-          I've learnt the basics of Bootstrap and had a chance to use pagination for the first time. I used reactive Angular forms
-          to validate user's input more efficiently. Last but not least I've learnt to write unit tests for Angular applications
-          using mock components and mock services.
-        </p>
-      </div>
-      <hr>
-      <div class="github">
-        <img class="icon" src='../images/icons/github.png' alt="Github icon"/>
-        <a href="http://www.github.com/jakub-wisniowski/angular2-tests" target="-blank" class="border-link">See code</a>
-      </div>
-      <hr>
-    </div>
-  </div>
-  <div class="footer">
-    <p>All rights reserved. Jakub Wiśniowski 2018</p>
-  </div>
+	<div class="info_link">
+		<button data-toggle="collapse" onclick="toggleText()" data-target="#intro" id="text">Show more info</button>
+	</div>
+
+	<div id="intro" class="intro collapse section-body">
+		<div class="description">
+			<p>
+				This app visualises assets from the Star Wars API. Allows users to sort assets by attributes when clicking table's header.
+				The webpage uses pagination and allows users to modify characters' data. User can also add a new character via
+				a form with validation set for every field.
+			</p>
+		</div>
+		<hr>
+		<div class="technologies">
+			<div class="technologies">
+				<div class="row">
+					<img class="icon" src='../images/icons/angular.png' aria-hidden="true"/> Angular
+				</div>
+
+				<div class="row">
+					<img class="icon" src='../images/icons/bootstrap.png' aria-hidden="true"/> Bootstrap
+				</div>
+
+				<div class="row">
+					<img class="icon" src='../images/icons/html5.png' aria-hidden="true"/> HTML5
+				</div>
+
+				<div class="row">
+					<img class="icon" src='../images/icons/css3.png' aria-hidden="true"/> CSS3
+				</div>
+
+				<div class="row">
+					<img class="icon" src='../images/icons/jasmine.png' aria-hidden="true"/> Jasmine
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="experience">
+			<p>
+				I've learnt the basics of Bootstrap and had a chance to use pagination for the first time. I used reactive Angular forms
+				to validate user's input more efficiently. Last but not least I've learnt to write unit tests for Angular applications
+				using mock components and mock services.
+			</p>
+		</div>
+		<hr>
+		<div class="github">
+			<img class="icon" src='../images/icons/github.png' alt="Github icon"/>
+			<a href="http://www.github.com/jakub-wisniowski/angular2-tests" target="-blank" class="border-link">See code</a>
+		</div>
+		<hr>
+	</div>
+</div>
+
+<div class="footer">
+	<p>All rights reserved. Jakub Wiśniowski 2018</p>
+</div>
+
+<div id="popup" class="popup">
+	<div class="popup-content">
+		<span class="close-popup glyphicon glyphicon-remove" onclick="closePopup()"></span>
+		<img id="imagePlaceholder" src="" alt="add new book">
+	</div>
+</div>
 </body>
