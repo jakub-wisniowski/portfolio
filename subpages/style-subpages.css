@@ -186,7 +186,7 @@ h1 {
 
 .popup {
   position: absolute;
-  top: -800px;
+  top: -130%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;

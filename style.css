@@ -388,7 +388,7 @@ form .form-control {
 .projects_container .flex-wrapper {
   min-width: 50%;
 }
-.projects_container .tight {
+.projects_container a {
   display: block;
   position: relative;
   background: #00abca;
@@ -396,7 +396,7 @@ form .form-control {
   cursor: pointer;
   margin: 20px auto;
 }
-.projects_container .tight .project_text {
+.projects_container a .project_text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -405,20 +405,20 @@ form .form-control {
   transform: translate(-50%, -50%);
   transition: opacity ease-out 250ms;
 }
-.projects_container .tight .card_title {
+.projects_container a .card_title {
   font-size: 2rem;
   margin-bottom: 0;
 }
-.projects_container .tight .card_body {
+.projects_container a .card_body {
   text-align: center;
 }
-.projects_container .tight:hover .project_text, .projects_container .tight:focus .project_text {
+.projects_container a:hover .project_text, .projects_container a:focus .project_text {
   opacity: 1;
 }
-.projects_container .tight:hover .project_image, .projects_container .tight:focus .project_image {
+.projects_container a:hover .project_image, .projects_container a:focus .project_image {
   opacity: 0.1;
 }
-.projects_container .tight::after, .projects_container .tight::before {
+.projects_container a::after, .projects_container a::before {
   content: "";
   position: absolute;
   top: 1.25em;
@@ -427,20 +427,20 @@ form .form-control {
   right: 1.25em;
   transition: transform ease-out 250ms;
 }
-.projects_container .tight::after {
+.projects_container a::after {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   transform: scale(0, 1);
 }
-.projects_container .tight::before {
+.projects_container a::before {
   border-left: 1px solid white;
   border-right: 1px solid white;
   transform: scale(1, 0);
 }
-.projects_container .tight:hover::after, .projects_container .tight:focus::after {
+.projects_container a:hover::after, .projects_container a:focus::after {
   transform: scale(1.05, 1);
 }
-.projects_container .tight:hover::before, .projects_container .tight:focus::before {
+.projects_container a:hover::before, .projects_container a:focus::before {
   transform: scale(1, 1.05);
 }
 .projects_container .project_image {
