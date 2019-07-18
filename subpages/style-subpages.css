@@ -119,9 +119,6 @@ h1 {
   opacity: 1;
   border: 5px solid #00abca;
 }
-.slides.slides-vertical .slide {
-  cursor: auto;
-}
 .slides .slide-nav-container {
   width: 100%;
   position: absolute;
@@ -186,19 +183,18 @@ h1 {
 
 .popup {
   position: absolute;
-  top: -130%;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -100%);
   z-index: 9;
   max-width: 90%;
-  overflow: hidden;
-  transition: top 0.3s;
+  transition: transform 0.3s;
   border: 5px solid #00abca;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 .popup.visible {
-  top: 150px;
-  overflow: visible;
+  transform: translate(-50%, 150px);
 }
 .popup .popup-content {
   position: relative;
