@@ -6,10 +6,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="../scripts/script.js"></script>
+	<script src="../scripts/subpage-script.js" type="module"></script>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" type="text/css" href="style-subpages.css">
-	<link rel='icon' href='images/icons/favicon.ico' type='image/x-icon'/>
+	<link rel='icon' href='../images/icons/favicon.ico' type='image/x-icon'/>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 	</div>
 
 	<div class="info_link">
-		<button data-toggle="collapse" onclick="toggleText()" data-target="#intro" id="text">Show more info</button>
+		<button data-toggle="collapse"  data-target="#intro" id="text">Show more info</button>
 	</div>
 	<div id="intro" class="intro collapse section-body">
 		<div class="description">
@@ -103,4 +103,5 @@
 		<img id="imagePlaceholder" src="" alt="add new book">
 	</div>
 </div>
+<button id="backToTop" tabindex="1"></button>
 </body>

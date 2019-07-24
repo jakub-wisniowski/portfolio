@@ -1,13 +1,19 @@
+import {initScroll, scrollToTop} from "./back-to-top.js";
+
 let slideIndex = 1;
 let placeholder, popup, subpageWrapper, footer;
 
 
-window.onload  = function () {
+window.onload  = () => {
 	popup = document.getElementById("popup");
 	showDivs(slideIndex);
 	placeholder = document.getElementById("imagePlaceholder");
 	subpageWrapper = document.getElementsByClassName("subpage-wrapper")[0];
 	footer = document.getElementsByClassName("footer")[0];
+
+	const button = document.getElementById("backToTop");
+	initScroll(button);
+	button.addEventListener("click", scrollToTop);
 };
 
 function plusDivs (n) {
@@ -50,13 +56,4 @@ function closePopup() {
 	popup.classList.remove("visible");
 	subpageWrapper.classList.remove("blurred");
 	footer.classList.remove("blurred");
-}
-
-function toggleText () {
-	let x = document.getElementById("text");
-	if (x.innerHTML === "Show more info") {
-		x.innerHTML = "Hide info";
-	} else {
-		x.innerHTML = "Show more info";
-	}
 }
