@@ -1,0 +1,28 @@
+@import './colors';
+
+.border-link {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      right: 0;
+      height: 2em;
+      transition: transform ease-out 250ms;
+      border-top: 1px solid $light-grey;
+      border-bottom: 1px solid $light-grey;
+      transform: scale(0, 1);
+    }
+  
+    &:hover::before,
+    &:focus::before {
+      transform: scale(1, 1);
+    }
+  
+    &:focus {
+      outline: none;
+      color: black;
+      text-decoration: none;
+    }
+  }

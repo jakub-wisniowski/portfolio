@@ -1,0 +1,145 @@
+<div class="subpage-wrapper">
+  <app-navbar></app-navbar>
+
+  <h1 class="section-header">AKN mobile app</h1>
+
+  <div id="intro">
+    <div class="description">
+      <p>
+        AKN mobile app is designed for students' use. It allows students to
+        learn words assigned to their group by teachers via the
+        <a [routerLink]="['/projects/AKN-web-app']">AKN web app</a>. Student can either choose
+        lessons by selecting them from a list view or by providing the start and
+        end date.
+      </p>
+
+      <p>
+        Student can revise or learn words. In revise mode they see all words
+        from a given lesson while in learn mode only words not learnt yet are
+        displayed. If a word has an additional comment, it can be displayed by
+        clicking the "show hint" button. Student can also see their progress
+        made in a given lesson.
+      </p>
+    </div>
+    <hr />
+    <div class="technologies">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/angular.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Angular</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/ionic.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Ionic</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/html5.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>HTML5</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/css3.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>CSS3</span>
+      </div>
+    </div>
+    <hr />
+    <div class="experience">
+      <p>
+        I've learnt how to create cross-platform apps with Ionic and how to use
+        Ionic-specific components such as datepicker. I worked with Cordova and
+        learnt HTML, CSS and Angular.
+      </p>
+    </div>
+    <hr />
+
+    <app-show-more-button
+      elementId="slides"
+      toggleClass="open"
+    ></app-show-more-button>
+
+    <div class="row slides" id="slides">
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/login.png"
+        alt="login"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/menu-lesson.png"
+        alt="lesson menu"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/choose-scope.png"
+        alt="choose scope"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/choose-scope-2.png"
+        alt="choose scope 2"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/revision-learning.png"
+        alt="choose revision or learning mode"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/correct.png"
+        alt="correct response"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/wrong.png"
+        alt="incorrect response"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/show-hint.png"
+        alt="show hint"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/AKN-mobile-app/progress.png"
+        alt="progress view"
+        onclick="showImage()"
+      />
+    </div>
+    <hr />
+    <app-github-button repo="http://www.github.com/jakub-wisniowski/mobile-app"></app-github-button>
+    <hr />
+  </div>
+</div>

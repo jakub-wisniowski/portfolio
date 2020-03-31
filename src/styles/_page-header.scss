@@ -1,0 +1,97 @@
+@import "./variables";
+
+.page-header {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+    background: $blue;
+    z-index: 1;
+    width: 100%;
+  
+    .hamburger_menu {
+      background-image: url($img_prefix+"/icons/hamburger.png");
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+      background-size: cover;
+      @media only screen and (min-width: 650px) {
+        display: none;
+      }
+    }
+  
+    .navigation_small {
+      text-align: center;
+      position: absolute;
+      top: 80px;
+      right: 30px;
+      background-color: #f9f9f9;
+      min-width: 250px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      opacity: 0.8;
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        background: $blue;
+        border: 2px solid black;
+        border-bottom: 1px solid black;
+  
+        li {
+          padding: 25px 5px;
+          font-size: 120%;
+          border-bottom: 1px solid black;
+  
+          &:hover {
+            background: $blue;
+          }
+  
+          a {
+            display: block;
+            color: white;
+  
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+  
+      @media only screen and (min-width: 650px) {
+        display: none;
+      }
+    }
+  
+    .navigation {
+      position: relative;
+      text-align: center;
+      padding: 30px 0;
+  
+      li {
+        display: inline-block;
+        width: 30%;
+  
+        a {
+          position: relative;
+  
+          &::before {
+            border-top: 2px solid $light-grey !important;
+            border-bottom: 2px solid $light-grey !important;
+          }
+  
+          &:hover {
+            color: white;
+          }
+        }
+      }
+  
+      @media only screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+  }

@@ -1,0 +1,324 @@
+@import "~src/styles/styles";
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  .banner_bg_opacity {
+    opacity: 0.3;
+    background-image: url($img_prefix+"background/banner.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+  }
+
+  .my_name {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 50vh 50px;
+    bottom: 140px;
+  }
+
+  .my_places {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .shortcut_img {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    height: 62px;
+    width: 62px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media only screen and (max-width: 1300px) {
+      transform: scale(0.9);
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    @media only screen and (max-width: 1100px) {
+      transform: scale(0.85);
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      transform: scale(0.75);
+      &:hover {
+        transform: scale(0.85);
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      transform: scale(0.65);
+      &:hover {
+        transform: scale(0.75);
+      }
+    }
+  }
+
+  .my_places_center {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 60px;
+
+    @media only screen and (max-width: 1300px) {
+      bottom: 75px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      bottom: 75px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      bottom: 50px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      bottom: 45px;
+    }
+  }
+}
+
+#bio_wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 0;
+
+  .bio {
+    width: 40%;
+  }
+
+  .bio + .bio {
+    text-align: left;
+    width: 60%;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.profile_picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 1em;
+  border: 7px solid $blue;
+}
+
+.instruction {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-direction: row;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.projects_container {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 50px 0;
+
+  @media only screen and (max-width: 750px) {
+    flex-flow: column wrap;
+  }
+
+  .flex-wrapper {
+    min-width: 50%;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    background: $blue;
+    max-width: 300px;
+    cursor: pointer;
+    margin: 20px auto;
+
+    .project_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      color: white;
+      transform: translate(-50%, -50%);
+      transition: opacity ease-out 250ms;
+    }
+
+    .card_title {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    .card_body {
+      text-align: center;
+    }
+
+    &:hover .project_text,
+    &:focus .project_text {
+      opacity: 1;
+    }
+
+    &:hover .project_image,
+    &:focus .project_image {
+      opacity: 0.1;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.25em;
+      bottom: 1.25em;
+      left: 1.25em;
+      right: 1.25em;
+      transition: transform ease-out 250ms;
+    }
+
+    &::after {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      transform: scale(0, 1);
+    }
+
+    &::before {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      transform: scale(1, 0);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scale(1.05, 1);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: scale(1, 1.05);
+    }
+  }
+
+  .project_image {
+    display: block;
+    border: 5px solid $blue;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .vertical {
+    max-width: 200px;
+  }
+}
+
+#contact {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  padding: 0;
+  form {
+    padding: 0 10%;
+    margin-top: 2%;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    .form-control {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contact_opacity {
+    opacity: 0.3;
+    background-image: url($img_prefix+"background/keyboard.jpg");
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+#thank-you-message {
+  display: none;
+  color: black;
+  clear: both;
+  min-height: 20px;
+  position: relative;
+  border-radius: 5px;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .bio {
+    clear: both;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 5%;
+    font-size: 25px;
+  }
+  .bio_text {
+    padding-top: 0;
+  }
+  form {
+    ::placeholder {
+      font-size: 20px;
+    }
+  }
+}

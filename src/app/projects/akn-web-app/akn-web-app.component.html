@@ -1,0 +1,140 @@
+<div class="subpage-wrapper">
+    <app-navbar></app-navbar>
+  
+    <h1 class="section-header">AKN web app</h1>
+  
+    <div id="intro">
+      <div class="description">
+        <p>
+            The AKN web app allows admin to create groups and assign teachers and students to them. Admins can create new accounts and
+            change users' credentials. They can also remove users from groups. Teachers can create new lesson, assign it to
+            a group and set exact time and date.
+        </p>
+        <p>
+            In the lesson view, teacher can add new words, edit them and remove them. Words can be added manually or automatically upon
+            providing the app with a csv file. Teacher can also see student's progress in two modes: from last 3 lessons or
+            from a specific lesson.
+        </p>
+      </div>
+      <hr />
+      <div class="technologies">
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/angular.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Angular</span>
+        </div>
+  
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/bootstrap.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Bootstrap</span>
+        </div>
+  
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/html5.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>HTML5</span>
+        </div>
+  
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/css3.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>CSS3</span>
+        </div>
+
+        <div class="row justify-content-space-between align-items-center">
+            <div class="img-wrapper">
+            <img
+                class="icon"
+                src="assets/images/icons/sails.png"
+                aria-hidden="true"
+            />
+            </div>
+            <span>Sails</span>
+        </div>
+
+        <div class="row justify-content-space-between align-items-center">
+            <div class="img-wrapper">
+            <img
+                class="icon"
+                src="assets/images/icons/mongodb.jpg"
+                aria-hidden="true"
+            />
+            </div>
+            <span>MongoDB</span>
+        </div>
+
+        <div class="row justify-content-space-between align-items-center">
+            <div class="img-wrapper">
+              <img
+                class="icon"
+                src="assets/images/icons/aws.png"
+                aria-hidden="true"
+              />
+            </div>
+            <span>AWS</span>
+        </div>
+      </div>
+   
+      <hr />
+      <div class="experience">
+        <p>
+            This project was my first encounter with web development. I've learnt the basics of HTML, CSS, Angular2, JavaScript and mongoDB.
+            I've been developing this project through all its phases, from the talks with the client until the deployment.
+            I've learnt how to authenticate users, allow them to upload files and how to design the web application to be user-friendly.
+            Last but not least, I added a speech synthesis feature using Polly provided by Amazon Web Services.
+        </p>
+      </div>
+      <hr />
+  
+      <app-show-more-button
+        elementId="slides"
+        toggleClass="open"
+      ></app-show-more-button>
+  
+      <div class="row slides" id="slides">
+        <img
+          class="slide"
+          src="assets/images/AKN-web-app/add-new-lessons.png"
+          alt="add new lessons"
+          onclick="showImage()"
+        />
+        <img
+          class="slide"
+          src="assets/images/AKN-web-app/AKN-app-preview.png"
+          alt="AKN app preview"
+          onclick="showImage()"
+        />
+        <img
+          class="slide"
+          src="assets/images/AKN-web-app/modify-account.png"
+          alt="modify account"
+          onclick="showImage()"
+        />
+      </div>
+      <hr />
+      <app-github-button repo="http://www.github.com/jakub-wisniowski/web-app-1337"></app-github-button>
+      <hr />
+    </div>
+  </div>
+  

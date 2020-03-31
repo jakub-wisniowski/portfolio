@@ -1,0 +1,32 @@
+.section-header {
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    height: 100px;
+    line-height: 100px;
+  
+    &::after,
+    &::before {
+      content: "";
+      height: 100%;
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 0;
+    }
+  
+    &::before {
+      z-index: -2;
+      background-color: white;
+    }
+  
+    &::after {
+      z-index: -1;
+      background-color: $blue;
+    }
+  }

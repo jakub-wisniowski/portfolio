@@ -1,0 +1,15 @@
+@import '~src/styles/styles';
+
+.button-wrapper {
+  font-size: $link-font;
+  padding: 20px;
+  text-align: center;
+
+  button {
+    border: 0;
+    background: none;
+    &:focus {
+        outline: none;
+    }
+  }
+}

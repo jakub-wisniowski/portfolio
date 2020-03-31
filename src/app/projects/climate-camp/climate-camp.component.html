@@ -1,0 +1,102 @@
+<div class="subpage-wrapper">
+    <app-navbar></app-navbar>
+  
+    <h1 class="section-header">Climate camp</h1>
+  
+    <div id="intro">
+      <div class="description">
+        <div>
+            Application was designed for the attendees of Climate Camp 2019. It has four basic functionalities:
+        <div>
+            <ul>
+                <li>register for the camp</li>
+                <li>see event's program</li>
+                <li>display program's details</li>
+                <li>check the necessary things to pack for the camp</li>
+            </ul>
+        </div>
+    </div>
+      </div>
+      <hr />
+      <div class="technologies">
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/flutter.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Flutter</span>
+        </div>
+  
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/dart.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Dart</span>
+        </div>
+  
+        <div class="row justify-content-space-between align-items-center">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              src="assets/images/icons/firebase.png"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Firebase</span>
+        </div>
+
+      </div>
+   
+      <hr />
+      <div class="experience">
+        <p>
+            This was my first project in Flutter, I have learnt how to create views, use shared preferences and open external links.
+             I have created my very first Firebase project in order to store information about camp's agenda and the list of crucial things to take to the camp.
+        </p>
+      </div>
+      <hr />
+  
+      <app-show-more-button
+        elementId="slides"
+        toggleClass="open"
+      ></app-show-more-button>
+  
+      <div class="row slides" id="slides">
+        <img
+          class="slide"
+          src="assets/images/climate-camp/menu.png"
+          alt="main menu"
+          onclick="showImage()"
+        />
+        <img
+          class="slide"
+          src="assets/images/climate-camp/items-list.png"
+          alt="list of crucial items to pack"
+          onclick="showImage()"
+        />
+        <img
+          class="slide"
+          src="assets/images/climate-camp/programme.png"
+          alt="programme overview"
+          onclick="showImage()"
+        />
+        <img
+          class="slide"
+          src="assets/images/climate-camp/details.png"
+          alt="programe details"
+          onclick="showImage()"
+        />
+      </div>
+      <hr />
+      <app-github-button repo="http://www.github.com/jakub-wisniowski/Climate-Camp-App"></app-github-button>
+      <hr />
+    </div>
+  </div>
+  

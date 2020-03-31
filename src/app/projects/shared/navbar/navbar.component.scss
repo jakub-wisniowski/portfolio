@@ -1,0 +1,30 @@
+@import '~src/styles/styles';
+
+:host {
+    position: absolute;
+    line-height: 80px;
+    left: 70px;
+    z-index: 1;
+    .go_back {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .home {
+        position: absolute;
+        top: 10px;
+        @media only screen and (min-width: 730px) {
+            display: none;
+        }
+    }
+    .go-back {
+        &:hover {
+            color: white;
+        }
+        .arrow {
+            @media only screen and (max-width: 730px) {
+                display: none;
+            }
+        }
+    }
+}

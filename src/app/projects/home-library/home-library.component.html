@@ -1,0 +1,132 @@
+<div class="subpage-wrapper">
+  <app-navbar></app-navbar>
+
+  <h1 class="section-header">Home library</h1>
+
+  <div id="intro">
+    <div class="description">
+      <p>
+        This app allows users to create their private library, which can be
+        shared with other people. The owner can add others to their library, if
+        the invited person does not have an account, an invitation email is
+        sent. Users can add books to their libraries either by filling out a
+        form or by providing a link to Google Books.
+      </p>
+
+      <p>
+        Books can be rented to other users or to people outside the system.
+        Every user can add comments to books in their libraries and mark books
+        as currently read. The system uses this information to calculate
+        statistics: books read per month and pages per day.
+      </p>
+    </div>
+
+    <hr />
+    <div class="technologies">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/angular.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Angular</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/bootstrap.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Bootstrap</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/html5.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>HTML5</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/css3.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>CSS3</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/sails.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Sails</span>
+      </div>
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/mongodb.jpg"
+            aria-hidden="true"
+          />
+        </div>
+        <span>MongoDB</span>
+      </div>
+    </div>
+
+    <hr />
+    <div class="experience">
+      <p>
+				I've learnt how to generate registration links for users and how to write web scrapers in order to obtain information about
+				books from Google Books.
+			</p>
+    </div>
+    <hr />
+
+    <app-show-more-button
+      elementId="slides"
+      toggleClass="open"
+    ></app-show-more-button>
+
+    <div class="row slides" id="slides">
+      <img
+        class="slide"
+        src="assets/images/home-library/add-new-book.png"
+        alt="add new book"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/home-library/home-library.png"
+        alt="home library"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/home-library/home-library-displayed.png"
+        alt="home library displayed"
+        onclick="showImage()"
+      />
+    </div>
+    <hr />
+    <app-github-button
+      repo="http://www.github.com/jakub-wisniowski/home-library"
+    ></app-github-button>
+    <hr />
+  </div>
+</div>

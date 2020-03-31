@@ -1,0 +1,131 @@
+<div class="subpage-wrapper">
+  <app-navbar></app-navbar>
+
+  <h1 class="section-header">RPN calculator</h1>
+
+  <div id="intro">
+    <div class="description">
+      <p>
+        Android calculator using the Reversed Polish Notation. Performs basic
+        arithmetic operations and allows user to undo an operation or clean the
+        stack. In settings user can set number of decimal places they want to
+        see. The app saves all the information when device is rotated, so the
+        user does not have to re-enter their calculations if their device tilts.
+      </p>
+    </div>
+
+    <hr />
+    <div class="technologies">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/android.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Android</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/kotlin.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Kotlin</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/sqlite.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>SQLite</span>
+      </div>
+    </div>
+
+    <hr />
+    <div class="experience">
+      <p>
+        I've understood the lifecycle of a mobile application and used this
+        knowledge to prevent user's data from dissapearing when they change
+        screen's orientation. I've also learnt how to create the menu and how to
+        design buttons and other UI components.
+      </p>
+    </div>
+    <hr />
+
+    <app-show-more-button
+      elementId="slides"
+      toggleClass="open"
+    ></app-show-more-button>
+
+    <div class="row slides" id="slides">
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/project-view.png"
+        alt="login"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/basic.png"
+        alt="basic view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/two-numbers.png"
+        alt="two numbers view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/sum1.png"
+        alt="sum view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/horizontal.png"
+        alt="horizontal view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/horizontal_minus.png"
+        alt="minus view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/horizontal_sum.png"
+        alt="horizontal sum view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/number_precision.png"
+        alt="settings view"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/RPN-calc/after_precision.png"
+        alt="view after changing settings"
+        onclick="showImage()"
+      />
+    </div>
+    <hr />
+    <app-github-button
+      repo="http://www.github.com/jakub-wisniowski/RPN-calculator"
+    ></app-github-button>
+    <hr />
+  </div>
+</div>
