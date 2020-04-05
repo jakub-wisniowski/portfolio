@@ -10,6 +10,7 @@ import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
