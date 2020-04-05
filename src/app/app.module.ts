@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     CollapseModule.forRoot()
   ],
   providers: [],
