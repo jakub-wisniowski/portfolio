@@ -1,18 +1,23 @@
-import { Component, ViewChild, ElementRef } from "@angular/core";
+import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "jakub-wisniowski";
 
   @ViewChild("backToTop")
   backToTop: ElementRef;
 
+  constructor(private router: Router) {
+
+  }
+
   scrollToTop = () => {
-    const button = (this.backToTop.nativeElement as HTMLElement);
+    const button = this.backToTop.nativeElement as HTMLElement;
 
     button.classList.add("active");
     const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -23,5 +28,15 @@ export class AppComponent {
       button.classList.remove("active");
       button.blur();
     }
+  };
+
+
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
   }
 }
