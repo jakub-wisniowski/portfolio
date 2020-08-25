@@ -162,30 +162,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _c0 = ["backToTop"];
 
-    var AppComponent = function AppComponent() {
-      var _this = this;
+    var AppComponent =
+    /*#__PURE__*/
+    function () {
+      function AppComponent(router) {
+        var _this = this;
 
-      _classCallCheck(this, AppComponent);
+        _classCallCheck(this, AppComponent);
 
-      this.title = "jakub-wisniowski";
+        this.router = router;
+        this.title = "jakub-wisniowski";
 
-      this.scrollToTop = function () {
-        var button = _this.backToTop.nativeElement;
-        button.classList.add("active");
-        var c = document.documentElement.scrollTop || document.body.scrollTop;
+        this.scrollToTop = function () {
+          var button = _this.backToTop.nativeElement;
+          button.classList.add("active");
+          var c = document.documentElement.scrollTop || document.body.scrollTop;
 
-        if (c > 0) {
-          window.requestAnimationFrame(_this.scrollToTop);
-          window.scrollTo(0, c - 30);
-        } else {
-          button.classList.remove("active");
-          button.blur();
+          if (c > 0) {
+            window.requestAnimationFrame(_this.scrollToTop);
+            window.scrollTo(0, c - 30);
+          } else {
+            button.classList.remove("active");
+            button.blur();
+          }
+        };
+      }
+
+      _createClass(AppComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.router.events.subscribe(function (evt) {
+            if (!(evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"])) {
+              return;
+            }
+
+            window.scrollTo(0, 0);
+          });
         }
-      };
-    };
+      }]);
+
+      return AppComponent;
+    }();
 
     AppComponent.ɵfac = function AppComponent_Factory(t) {
-      return new (t || AppComponent)();
+      return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]));
     };
 
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -241,7 +261,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           templateUrl: "./app.component.html",
           styleUrls: ["./app.component.scss"]
         }]
-      }], null, {
+      }], function () {
+        return [{
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }];
+      }, {
         backToTop: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
           args: ["backToTop"]
@@ -603,7 +627,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-home"]],
       decls: 198,
       vars: 27,
-      consts: [[1, "content-wrapper"], [1, "page-header"], [1, "container", 3, "clickOutside"], ["type", "button", "aria-controls", "navigation", 1, "hamburger-menu", 3, "click"], ["width", "50", "src", "assets/images/icons/hamburger.png"], ["id", "navigation", 1, "navigation-small", 3, "collapse", "isAnimated"], ["href", "#about", 1, "navigation-link-small", 3, "click"], ["href", "#projects", 1, "navigation-link-small", 3, "click"], ["href", "#contact", 1, "navigation-link-small", 3, "click"], [1, "navigation"], ["href", "#about", 1, "navigation-link", "border-link"], ["href", "#projects", 1, "navigation-link", "border-link"], ["href", "#contact", 1, "navigation-link", "border-link"], [1, "banner"], [1, "banner_bg_opacity"], [1, "my_name"], [1, "my_places_center"], [1, "my_places"], ["href", "https://github.com/jakub-wisniowski", "data-tool-tip", "Github profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/github.png", "alt", "Github profile"], ["href", "https://www.linkedin.com/in/jakub-m-wisniowski/", "data-tool-tip", "LinkedIn profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/linkedin.png", "alt", "LinkedIn profile"], ["id", "about"], [1, "section-header"], ["id", "bio_wrap", 1, "container"], [1, "bio"], ["src", "assets/images/profile.png", "alt", "Profile picture", 1, "profile_picture"], [1, "bio_text"], ["id", "projects"], [1, "container", "projects_container"], [1, "flex-wrapper"], [3, "routerLink"], [1, "project_image"], ["src", "assets/images/home-library/home-library-icon.png", "alt", "Home library project"], [1, "project_text"], [1, "card_title"], [1, "card_body"], ["src", "assets/images/planets/list-view.png", "alt", "Planets project"], ["src", "assets/images/AKN-web-app/modify-account.png", "alt", "AKN web project"], ["src", "assets/images/AKN-mobile-app/login-icon.png", "alt", "AKN mobile project"], [1, "tight", "vertical", 3, "routerLink"], ["src", "assets/images/RPN-calc/basic.png", "alt", "RPN project"], ["src", "assets/images/lego-app/project-view.png", "alt", "LEGO project"], ["src", "assets/images/mr-dumpling/menu.png", "alt", "Thesis project"], ["src", "assets/images/climate-camp/menu.png", "alt", "Climate camp project"], ["id", "contact"], [1, "contact_opacity"], [1, "container"], [1, "row"], [1, "instruction"], ["href", "mailto:jakub.m.wisniowski@gmail.com", "data-tool-tip", "open in your email client", 1, "border-link"], ["id", "contact-form", 1, "col", "col-12", 3, "formGroup", "ngSubmit"], ["for", "name"], ["id", "name", "name", "name", "placeholder", "Name", "type", "text", "formControlName", "name", 1, "form-control"], ["class", "alert alert-danger", 4, "ngIf"], ["for", "email"], ["id", "email", "name", "email", "placeholder", "Email", "type", "email", "formControlName", "email", 1, "form-control"], ["for", "message"], ["id", "message", "name", "message", "placeholder", "Message", "rows", "5", "formControlName", "message", 1, "form-control"], ["id", "send-button", "type", "submit", 1, "btn", "btn-default", "pull-right", 3, "disabled"], ["id", "thank-you-message", 3, "ngClass"], [1, "alert", "alert-danger"], [4, "ngIf"]],
+      consts: [[1, "content-wrapper"], [1, "page-header"], [1, "container", 3, "clickOutside"], ["type", "button", "aria-controls", "navigation", 1, "hamburger-menu", 3, "click"], ["width", "50", "src", "assets/images/icons/hamburger.png"], ["id", "navigation", 1, "navigation-small", 3, "collapse", "isAnimated"], ["href", "#about", 1, "navigation-link-small", 3, "click"], ["href", "#projects", 1, "navigation-link-small", 3, "click"], ["href", "#contact", 1, "navigation-link-small", 3, "click"], [1, "navigation"], ["href", "#about", 1, "navigation-link", "border-link"], ["href", "#projects", 1, "navigation-link", "border-link"], ["href", "#contact", 1, "navigation-link", "border-link"], [1, "banner"], [1, "banner_bg_opacity"], [1, "my_name"], [1, "my_places_center"], [1, "my_places"], ["href", "https://github.com/jakub-wisniowski", "data-tool-tip", "Github profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/github.png", "alt", "Github profile"], ["href", "https://www.linkedin.com/in/jakub-m-wisniowski/", "data-tool-tip", "LinkedIn profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/linkedin.png", "alt", "LinkedIn profile"], ["id", "about"], [1, "section-header"], ["id", "bio_wrap", 1, "container"], [1, "bio"], ["src", "assets/images/profile.jpeg", "alt", "Profile picture", 1, "profile_picture"], [1, "bio_text"], ["id", "projects"], [1, "container", "projects_container"], [1, "flex-wrapper"], [3, "routerLink"], [1, "project_image"], ["src", "assets/images/home-library/home-library-icon.png", "alt", "Home library project"], [1, "project_text"], [1, "card_title"], [1, "card_body"], ["src", "assets/images/planets/list-view.png", "alt", "Planets project"], ["src", "assets/images/AKN-web-app/modify-account.png", "alt", "AKN web project"], ["src", "assets/images/AKN-mobile-app/login-icon.png", "alt", "AKN mobile project"], [1, "tight", "vertical", 3, "routerLink"], ["src", "assets/images/RPN-calc/basic.png", "alt", "RPN project"], ["src", "assets/images/lego-app/project-view.png", "alt", "LEGO project"], ["src", "assets/images/mr-dumpling/menu.png", "alt", "Thesis project"], ["src", "assets/images/climate-camp/menu.png", "alt", "Climate camp project"], ["id", "contact"], [1, "contact_opacity"], [1, "container"], [1, "row"], [1, "instruction"], ["href", "mailto:jakub.m.wisniowski@gmail.com", "data-tool-tip", "open in your email client", 1, "border-link"], ["id", "contact-form", 1, "col", "col-12", 3, "formGroup", "ngSubmit"], ["for", "name"], ["id", "name", "name", "name", "placeholder", "Name", "type", "text", "formControlName", "name", 1, "form-control"], ["class", "alert alert-danger", 4, "ngIf"], ["for", "email"], ["id", "email", "name", "email", "placeholder", "Email", "type", "email", "formControlName", "email", 1, "form-control"], ["for", "message"], ["id", "message", "name", "message", "placeholder", "Message", "rows", "5", "formControlName", "message", 1, "form-control"], ["id", "send-button", "type", "submit", 1, "btn", "btn-default", "pull-right", 3, "disabled"], ["id", "thank-you-message", 3, "ngClass"], [1, "alert", "alert-danger"], [4, "ngIf"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
