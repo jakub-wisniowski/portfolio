@@ -290,10 +290,10 @@ const _c0 = function () { return ["projects/home-library"]; };
 const _c1 = function () { return ["projects/planets"]; };
 const _c2 = function () { return ["projects/AKN-web-app"]; };
 const _c3 = function () { return ["projects/AKN-mobile-app"]; };
-const _c4 = function () { return ["projects/RPN-calc"]; };
-const _c5 = function () { return ["projects/lego-app"]; };
-const _c6 = function () { return ["projects/mr-dumpling"]; };
-const _c7 = function () { return ["projects/climate-camp"]; };
+const _c4 = function () { return ["projects/lego-app"]; };
+const _c5 = function () { return ["projects/mr-dumpling"]; };
+const _c6 = function () { return ["projects/climate-camp"]; };
+const _c7 = function () { return ["projects/climate-camp-website"]; };
 const _c8 = function (a0) { return { visible: a0 }; };
 class HomeComponent {
     constructor(http, fb) {
@@ -327,7 +327,7 @@ class HomeComponent {
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"])); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 198, vars: 27, consts: [[1, "content-wrapper"], [1, "page-header"], [1, "container", 3, "clickOutside"], ["type", "button", "aria-controls", "navigation", 1, "hamburger-menu", 3, "click"], ["width", "50", "src", "assets/images/icons/hamburger.png"], ["id", "navigation", 1, "navigation-small", 3, "collapse", "isAnimated"], ["href", "#about", 1, "navigation-link-small", 3, "click"], ["href", "#projects", 1, "navigation-link-small", 3, "click"], ["href", "#contact", 1, "navigation-link-small", 3, "click"], [1, "navigation"], ["href", "#about", 1, "navigation-link", "border-link"], ["href", "#projects", 1, "navigation-link", "border-link"], ["href", "#contact", 1, "navigation-link", "border-link"], [1, "banner"], [1, "banner_bg_opacity"], [1, "my_name"], [1, "my_places_center"], [1, "my_places"], ["href", "https://github.com/jakub-wisniowski", "data-tool-tip", "Github profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/github.png", "alt", "Github profile"], ["href", "https://www.linkedin.com/in/jakub-m-wisniowski/", "data-tool-tip", "LinkedIn profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/linkedin.png", "alt", "LinkedIn profile"], ["id", "about"], [1, "section-header"], ["id", "bio_wrap", 1, "container"], [1, "bio"], ["src", "assets/images/profile.jpeg", "alt", "Profile picture", 1, "profile_picture"], [1, "bio_text"], ["id", "projects"], [1, "container", "projects_container"], [1, "flex-wrapper"], [3, "routerLink"], [1, "project_image"], ["src", "assets/images/home-library/home-library-icon.png", "alt", "Home library project"], [1, "project_text"], [1, "card_title"], [1, "card_body"], ["src", "assets/images/planets/list-view.png", "alt", "Planets project"], ["src", "assets/images/AKN-web-app/modify-account.png", "alt", "AKN web project"], ["src", "assets/images/AKN-mobile-app/login-icon.png", "alt", "AKN mobile project"], [1, "tight", "vertical", 3, "routerLink"], ["src", "assets/images/RPN-calc/basic.png", "alt", "RPN project"], ["src", "assets/images/lego-app/project-view.png", "alt", "LEGO project"], ["src", "assets/images/mr-dumpling/menu.png", "alt", "Thesis project"], ["src", "assets/images/climate-camp/menu.png", "alt", "Climate camp project"], ["id", "contact"], [1, "contact_opacity"], [1, "container"], [1, "row"], [1, "instruction"], ["href", "mailto:jakub.m.wisniowski@gmail.com", "data-tool-tip", "open in your email client", 1, "border-link"], ["id", "contact-form", 1, "col", "col-12", 3, "formGroup", "ngSubmit"], ["for", "name"], ["id", "name", "name", "name", "placeholder", "Name", "type", "text", "formControlName", "name", 1, "form-control"], ["class", "alert alert-danger", 4, "ngIf"], ["for", "email"], ["id", "email", "name", "email", "placeholder", "Email", "type", "email", "formControlName", "email", 1, "form-control"], ["for", "message"], ["id", "message", "name", "message", "placeholder", "Message", "rows", "5", "formControlName", "message", 1, "form-control"], ["id", "send-button", "type", "submit", 1, "btn", "btn-default", "pull-right", 3, "disabled"], ["id", "thank-you-message", 3, "ngClass"], [1, "alert", "alert-danger"], [4, "ngIf"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 198, vars: 27, consts: [[1, "content-wrapper"], [1, "page-header"], [1, "container", 3, "clickOutside"], ["type", "button", "aria-controls", "navigation", 1, "hamburger-menu", 3, "click"], ["width", "50", "src", "assets/images/icons/hamburger.png"], ["id", "navigation", 1, "navigation-small", 3, "collapse", "isAnimated"], ["href", "#about", 1, "navigation-link-small", 3, "click"], ["href", "#projects", 1, "navigation-link-small", 3, "click"], ["href", "#contact", 1, "navigation-link-small", 3, "click"], [1, "navigation"], ["href", "#about", 1, "navigation-link", "border-link"], ["href", "#projects", 1, "navigation-link", "border-link"], ["href", "#contact", 1, "navigation-link", "border-link"], [1, "banner"], [1, "banner_bg_opacity"], [1, "my_name"], [1, "my_places_center"], [1, "my_places"], ["href", "https://github.com/jakub-wisniowski", "data-tool-tip", "Github profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/github.png", "alt", "Github profile"], ["href", "https://www.linkedin.com/in/jakub-m-wisniowski/", "data-tool-tip", "LinkedIn profile", "target", "-blank", 1, "shortcut_img"], ["src", "assets/images/icons/linkedin.png", "alt", "LinkedIn profile"], ["id", "about"], [1, "section-header"], ["id", "bio_wrap", 1, "container"], [1, "bio"], ["src", "assets/images/profile.jpeg", "alt", "Profile picture", 1, "profile_picture"], [1, "bio_text"], ["id", "projects"], [1, "container", "projects_container"], [1, "flex-wrapper"], [3, "routerLink"], [1, "project_image"], ["src", "assets/images/home-library/home-library-icon.png", "alt", "Home library project"], [1, "project_text"], [1, "card_title"], [1, "card_body"], ["src", "assets/images/planets/list-view.png", "alt", "Planets project"], ["src", "assets/images/AKN-web-app/modify-account.png", "alt", "AKN web project"], ["src", "assets/images/AKN-mobile-app/login-icon.png", "alt", "AKN mobile project"], [1, "tight", "vertical", 3, "routerLink"], ["src", "assets/images/lego-app/project-view.png", "alt", "LEGO project"], ["src", "assets/images/mr-dumpling/menu.png", "alt", "Thesis project"], ["src", "assets/images/climate-camp/menu.png", "alt", "Climate camp project"], ["src", "assets/images/icons/climate-camp-logo.png", "alt", "Climate camp website"], ["id", "contact"], [1, "contact_opacity"], [1, "container"], [1, "row"], [1, "instruction"], ["href", "mailto:jakub.m.wisniowski@gmail.com", "data-tool-tip", "open in your email client", 1, "border-link"], ["id", "contact-form", 1, "col", "col-12", 3, "formGroup", "ngSubmit"], ["for", "name"], ["id", "name", "name", "name", "placeholder", "Name", "type", "text", "formControlName", "name", 1, "form-control"], ["class", "alert alert-danger", 4, "ngIf"], ["for", "email"], ["id", "email", "name", "email", "placeholder", "Email", "type", "email", "formControlName", "email", 1, "form-control"], ["for", "message"], ["id", "message", "name", "message", "placeholder", "Message", "rows", "5", "formControlName", "message", 1, "form-control"], ["id", "send-button", "type", "submit", 1, "btn", "btn-default", "pull-right", 3, "disabled"], ["id", "thank-you-message", 3, "ngClass"], [1, "alert", "alert-danger"], [4, "ngIf"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "section", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -532,7 +532,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](126, "div", 34);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "h3", 35);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "RPN calculator");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "Lego app");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "p", 36);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "Android");
@@ -545,35 +545,35 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "div", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "a", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "a", 31);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](137, "div", 32);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](138, "img", 42);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "div", 34);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "h3", 35);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](141, "Lego app");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](141, "Mr Dumpling");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](142, "p", 36);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](143, "Android");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](144, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](145, "Kotlin");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](146, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](147, "SQLite");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](143, " Unity\u00A0C#\u00A0Google\u00A0Play ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "div", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "a", 31);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "div", 32);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](151, "img", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "div", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](145, "a", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](146, "div", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](147, "img", 43);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "div", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](153, "h3", 35);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](154, "Mr Dumpling");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "div", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "h3", 35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](150, "Climate Camp Mobile app");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](155, "p", 36);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](156, " Unity\u00A0C#\u00A0Google\u00A0Play ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](151, "p", 36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](152, "Flutter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](153, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](154, "Dart");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](155, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](156, "Firebase");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -585,14 +585,14 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](161, "div", 34);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](162, "h3", 35);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](163, "Climate Camp");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](163, "Climate Camp website");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](164, "p", 36);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](165, "Flutter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](165, "Angular 9");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](166, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "Dart");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "Scully");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](168, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "Firebase");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "Bootstrap");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -659,9 +659,9 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](21, _c4));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](22, _c5));
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](23, _c6));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](23, _c6));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](24, _c7));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.form);

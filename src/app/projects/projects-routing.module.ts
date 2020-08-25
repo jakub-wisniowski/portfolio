@@ -9,6 +9,7 @@ import { RpnCalculatorComponent } from "./rpn-calculator/rpn-calculator.componen
 import { LegoAppComponent } from "./lego-app/lego-app.component";
 import { MrDumplingComponent } from "./mr-dumpling/mr-dumpling.component";
 import { ClimateCampComponent } from "./climate-camp/climate-camp.component";
+import { ClimateCampWebsiteComponent } from './climate-camp-website/climate-camp-website.component';
 
 const routes: Routes = [
   { path: "home-library", component: HomeLibraryComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: "RPN-calc", component: RpnCalculatorComponent },
   { path: "lego-app", component: LegoAppComponent },
   { path: "mr-dumpling", component: MrDumplingComponent },
-  { path: "climate-camp", component: ClimateCampComponent }
+  { path: "climate-camp", component: ClimateCampComponent },
+  { path: "climate-camp-website", component: ClimateCampWebsiteComponent }
 ];
 
 @NgModule({

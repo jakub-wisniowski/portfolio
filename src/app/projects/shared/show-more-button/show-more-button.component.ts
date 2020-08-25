@@ -3,7 +3,7 @@ import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-show-more-button',
-    template: '<div class="button-wrapper"><button (click)="toggleDescription()">Show gallery</button></div>',
+    template: `<div class="button-wrapper"><button (click)="toggleDescription()">{{ isHidden ? 'Show gallery' : 'Hide gallery'}}</button></div>`,
     styleUrls: ['./show-more-button.component.scss']
 })
 
@@ -14,14 +14,16 @@ export class ShowMoreButtonComponent {
     @Input()
     toggleClass: string;
 
+    isHidden = true;
+
     constructor() {}
 
     get elementRef() {
         return document.getElementById(this.elementId);
     }
     toggleDescription() {
-       const isOpen = this.elementRef.classList.contains(this.toggleClass);
-       if(isOpen) {
+       this.isHidden = this.elementRef.classList.contains(this.toggleClass);
+       if(this.isHidden) {
            this.elementRef.classList.remove(this.toggleClass);
        } else {
            this.elementRef.classList.add(this.toggleClass);

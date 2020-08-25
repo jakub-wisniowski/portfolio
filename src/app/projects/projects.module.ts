@@ -14,6 +14,7 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShowMoreButtonComponent } from './shared/show-more-button/show-more-button.component';
 import { GithubButtonComponent } from './shared/github-button/github-button.component';
+import { ClimateCampWebsiteComponent } from './climate-camp-website/climate-camp-website.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { GithubButtonComponent } from './shared/github-button/github-button.comp
     LegoAppComponent,
     MrDumplingComponent,
     ClimateCampComponent,
+    ClimateCampWebsiteComponent,
     NavbarComponent,
     ShowMoreButtonComponent,
     GithubButtonComponent

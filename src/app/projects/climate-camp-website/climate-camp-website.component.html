@@ -1,0 +1,112 @@
+<div class="subpage-wrapper">
+  <h1 class="section-header">
+    <app-navbar></app-navbar>
+    Climate Camp website
+  </h1>
+
+  <div id="intro">
+    <div class="description">
+      <p>
+        The Climate Camp website is designed to gather all important information
+        about the collective and it's actions. It has been released in July 2020
+        and is currently being enhanced by nice-to-have features. We are also
+        working on improving the performance. It has been built by a team of
+        three - UX designer, DevOps specialist and me - a Frontend Developer.
+      </p>
+      <p>
+        The website replaced the old Wordpress version - it is now possible to
+        add content via a simple markdown editor set up by the DevOps
+        specialist. My task was to come up with a suitable frontend
+        architechture that would allow scully parse data from the editor and
+        display them in the menu.
+      </p>
+    </div>
+    <hr />
+    <div class="technologies">
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/angular.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Angular</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/bootstrap.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Bootstrap</span>
+      </div>
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/scully.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Scully</span>
+      </div>
+
+
+      <div class="row justify-content-space-between align-items-center">
+        <div class="img-wrapper">
+          <img
+            class="icon"
+            src="assets/images/icons/transloco.png"
+            aria-hidden="true"
+          />
+        </div>
+        <span>Transloco</span>
+      </div>
+    </div>
+    <hr />
+    <div class="experience">
+      <p>
+        I implemented the internationalisation using transloco package. I've
+        been trying to optimize the loading speed by using static site generator
+        - scully.io. Angular Animations have been used in the project to animate
+        route changes. Right now I'm working on images optimization to make sure
+        they don't slow down the website too much.
+      </p>
+    </div>
+    <hr />
+
+    <app-show-more-button
+      elementId="slides"
+      toggleClass="open"
+    ></app-show-more-button>
+
+    <div class="row slides" id="slides">
+      <img
+        class="slide"
+        src="assets/images/climate-camp-website/climate-camp-website-01.png"
+        alt="main page"
+        onclick="showImage()"
+      />
+      <img
+        class="slide"
+        src="assets/images/climate-camp-website/climate-camp-website-02.png"
+        alt="subpage"
+        onclick="showImage()"
+      />
+    </div>
+    <hr />
+    <div class="row justify-content-center align-items-center">
+      <img class="icon" src="assets/images/icons/climate-camp-logo.png" />
+
+      <a href="https://obozdlaklimatu.org" target="-blank" class="border-link"
+        >See website</a
+      >
+    </div>
+    <hr />
+  </div>
+</div>
