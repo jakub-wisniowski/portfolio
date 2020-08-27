@@ -18,23 +18,17 @@
       >
         <ul>
           <li>
-            <a
-              class="navigation-link-small"
-              (click)="scrollToSection(about)"
+            <a class="navigation-link-small" (click)="scrollToSection(about)"
               >ABOUT</a
             >
           </li>
           <li>
-            <a
-              class="navigation-link-small"
-              (click)="scrollToSection(projects)"
+            <a class="navigation-link-small" (click)="scrollToSection(projects)"
               >PROJECTS</a
             >
           </li>
           <li>
-            <a
-              class="navigation-link-small"
-              (click)="scrollToSection(contact)"
+            <a class="navigation-link-small" (click)="scrollToSection(contact)"
               >CONTACT</a
             >
           </li>
@@ -42,13 +36,25 @@
       </div>
       <ul class="navigation">
         <li>
-          <a class="navigation-link border-link" (click)="scrollToSection(about)">ABOUT</a>
+          <a
+            class="navigation-link border-link"
+            (click)="scrollToSection(about)"
+            >ABOUT</a
+          >
         </li>
         <li>
-          <a class="navigation-link border-link" (click)="scrollToSection(projects)">PROJECTS</a>
+          <a
+            class="navigation-link border-link"
+            (click)="scrollToSection(projects)"
+            >PROJECTS</a
+          >
         </li>
         <li>
-          <a class="navigation-link border-link" (click)="scrollToSection(contact)">CONTACT</a>
+          <a
+            class="navigation-link border-link"
+            (click)="scrollToSection(contact)"
+            >CONTACT</a
+          >
         </li>
       </ul>
     </div>
@@ -93,17 +99,18 @@
       <div class="bio">
         <div class="bio_text">
           <p>
-            I am a Frontend Developer with 2 years of experience. I graduated from Computer Science
-            at
+            I am a Frontend Developer with 2 years of experience. I graduated
+            from Computer Science at
             <b>Poznan University of&nbsp;Technology</b> in February 2019.
           </p>
 
           <p>
             I'm looking for mid level frontend or&nbsp;fullstack positions.
-            Right now, I'm working mainly in
-            <b>Angular 9</b>. In my everyday work I use Typescript, but I'm also familiar with Dart.
-            For the last 6 months I worked on a project using technologies such as REST API, RxJS, NgRx and ngx-bootstrap.
-            I write and maintain unit and e2e tests.
+            Right now, I'm working mainly in <b>Angular 9</b>. In my everyday
+            work I use Typescript, but I'm also familiar with Dart. For the last
+            6 months I worked on a project using technologies such as REST API,
+            RxJS, NgRx and ngx-bootstrap. I write and maintain unit and e2e
+            tests.
           </p>
 
           <p>
@@ -115,8 +122,9 @@
           <p>
             Foreign languages are my passion, I've been studying
             <b>English</b> at Adam Mickiewicz University, I also speak
-            <b>French</b> and have basic knowledge of <b>Danish</b>.
-            After working hours I translate texts and work on various IT solutions for grassroots groups.
+            <b>French</b> and have basic knowledge of <b>Danish</b>. After
+            working hours I translate texts and work on various IT solutions for
+            grassroots groups.
           </p>
         </div>
       </div>
@@ -135,9 +143,7 @@
           </div>
           <div class="project_text">
             <h3 class="card_title">Home library</h3>
-            <p class="card_body">
-              Angular&nbsp;SailsJS&nbsp;MongoDB
-            </p>
+            <p class="card_body">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
           </div>
         </a>
       </div>
@@ -152,9 +158,7 @@
           </div>
           <div class="project_text">
             <h3 class="card_title">Planets</h3>
-            <p class="card_body">
-              Angular&nbsp;CSS3&nbsp;Bootstrap
-            </p>
+            <p class="card_body">Angular&nbsp;CSS3&nbsp;Bootstrap</p>
           </div>
         </a>
       </div>
@@ -169,9 +173,7 @@
           </div>
           <div class="project_text">
             <h3 class="card_title">AKN webapp</h3>
-            <p class="card_body">
-              Angular&nbsp;SailsJS&nbsp;MongoDB
-            </p>
+            <p class="card_body">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
           </div>
         </a>
       </div>
@@ -186,13 +188,11 @@
           </div>
           <div class="project_text">
             <h3 class="card_title">AKN mobile app</h3>
-            <p class="card_body">
-              Ionic2&nbsp;HTML5&nbsp;CSS3
-            </p>
+            <p class="card_body">Ionic2&nbsp;HTML5&nbsp;CSS3</p>
           </div>
         </a>
       </div>
-<!-- 
+      <!-- 
       <div class="flex-wrapper">
         <a class="tight vertical" [routerLink]="['projects/RPN-calc']">
           <div class="project_image">
@@ -230,9 +230,7 @@
           </div>
           <div class="project_text">
             <h3 class="card_title">Mr Dumpling</h3>
-            <p class="card_body">
-              Unity&nbsp;C#&nbsp;Google&nbsp;Play
-            </p>
+            <p class="card_body">Unity&nbsp;C#&nbsp;Google&nbsp;Play</p>
           </div>
         </a>
       </div>
@@ -319,8 +317,12 @@
             *ngIf="f.email.touched && f.email.invalid"
             class="alert alert-danger"
           >
-            <ng-container *ngIf="f.email.errors.required">Email is required.</ng-container>
-            <ng-container *ngIf="f.email.errors.email">Incorrect email address.</ng-container>
+            <ng-container *ngIf="f.email.errors.required"
+              >Email is required.</ng-container
+            >
+            <ng-container *ngIf="f.email.errors.email"
+              >Incorrect email address.</ng-container
+            >
           </div>
           <label for="message">Your message</label>
           <textarea
