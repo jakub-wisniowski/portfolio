@@ -1,0 +1,12 @@
+@mixin hover-scale($scale: 0.95) {
+    &:not(:disabled):hover {
+        transform: scale($scale);
+    }
+}
+
+
+@mixin hover-opacity($opacity: 0.5) {
+    &:not(:disabled):hover {
+        opacity: $opacity;
+    }
+}

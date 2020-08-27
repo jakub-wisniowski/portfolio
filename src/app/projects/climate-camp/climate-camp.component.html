@@ -63,38 +63,8 @@
         </p>
       </div>
       <hr />
+      <app-gallery [slides]="images"></app-gallery>
   
-      <app-show-more-button
-        elementId="slides"
-        toggleClass="open"
-      ></app-show-more-button>
-  
-      <div class="row slides" id="slides">
-        <img
-          class="slide"
-          src="assets/images/climate-camp/menu.png"
-          alt="main menu"
-          onclick="showImage()"
-        />
-        <img
-          class="slide"
-          src="assets/images/climate-camp/items-list.png"
-          alt="list of crucial items to pack"
-          onclick="showImage()"
-        />
-        <img
-          class="slide"
-          src="assets/images/climate-camp/programme.png"
-          alt="programme overview"
-          onclick="showImage()"
-        />
-        <img
-          class="slide"
-          src="assets/images/climate-camp/details.png"
-          alt="programe details"
-          onclick="showImage()"
-        />
-      </div>
       <hr />
       <app-github-button repo="http://www.github.com/jakub-wisniowski/Climate-Camp-App"></app-github-button>
       <hr />

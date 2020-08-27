@@ -1,0 +1,14 @@
+@import "~src/styles/styles";
+
+:host {
+  position: absolute;
+  line-height: 80px;
+  left: 70px;
+  z-index: 1;
+  position: absolute;
+  left: 30px;
+
+  .home:hover {
+    color: $yellow;
+  }
+}

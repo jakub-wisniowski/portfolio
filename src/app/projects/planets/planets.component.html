@@ -83,55 +83,8 @@
     </div>
     <hr />
 
-    <app-show-more-button
-      elementId="slides"
-      toggleClass="open"
-    ></app-show-more-button>
+    <app-gallery [slides]="images"></app-gallery>
 
-    <div class="row slides" id="slides">
-      <img
-        class="slide"
-        src="assets/images/planets/list-view.png"
-        alt="list view"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/search.png"
-        alt="search view"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/sorted.png"
-        alt="column sorted after clicking the header"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/edit.png"
-        alt="edit row view"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/add-character.png"
-        alt="add character view"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/validation.png"
-        alt="validation"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/planets/error.png"
-        alt="error view"
-        onclick="showImage()"
-      />
-    </div>
     <hr />
     <app-github-button
       repo="http://www.github.com/jakub-wisniowski/angular2-tests"

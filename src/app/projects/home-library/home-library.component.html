@@ -1,5 +1,4 @@
 <div class="subpage-wrapper">
-
   <h1 class="section-header">
     <app-navbar></app-navbar>
     Home library
@@ -94,37 +93,15 @@
     <hr />
     <div class="experience">
       <p>
-				I've learnt how to generate registration links for users and how to write web scrapers in order to obtain information about
-				books from Google Books.
-			</p>
+        I've learnt how to generate registration links for users and how to
+        write web scrapers in order to obtain information about books from
+        Google Books.
+      </p>
     </div>
     <hr />
 
-    <app-show-more-button
-      elementId="slides"
-      toggleClass="open"
-    ></app-show-more-button>
+    <app-gallery [slides]="images"></app-gallery>
 
-    <div class="row slides" id="slides">
-      <img
-        class="slide"
-        src="assets/images/home-library/add-new-book.png"
-        alt="add new book"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/home-library/home-library.png"
-        alt="home library"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/home-library/home-library-displayed.png"
-        alt="home library displayed"
-        onclick="showImage()"
-      />
-    </div>
     <hr />
     <app-github-button
       repo="http://www.github.com/jakub-wisniowski/home-library"

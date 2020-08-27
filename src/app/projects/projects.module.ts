@@ -10,11 +10,8 @@ import { RpnCalculatorComponent } from "./rpn-calculator/rpn-calculator.componen
 import { LegoAppComponent } from "./lego-app/lego-app.component";
 import { MrDumplingComponent } from "./mr-dumpling/mr-dumpling.component";
 import { ClimateCampComponent } from "./climate-camp/climate-camp.component";
-import { NavbarComponent } from "./shared/navbar/navbar.component";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ShowMoreButtonComponent } from './shared/show-more-button/show-more-button.component';
-import { GithubButtonComponent } from './shared/github-button/github-button.component';
 import { ClimateCampWebsiteComponent } from './climate-camp-website/climate-camp-website.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,11 +23,8 @@ import { ClimateCampWebsiteComponent } from './climate-camp-website/climate-camp
     LegoAppComponent,
     MrDumplingComponent,
     ClimateCampComponent,
-    ClimateCampWebsiteComponent,
-    NavbarComponent,
-    ShowMoreButtonComponent,
-    GithubButtonComponent
+    ClimateCampWebsiteComponent
   ],
-  imports: [CommonModule, ProjectsRoutingModule, FontAwesomeModule]
+  imports: [CommonModule, ProjectsRoutingModule, SharedModule]
 })
 export class ProjectsModule {}

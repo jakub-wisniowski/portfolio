@@ -56,7 +56,6 @@
         <span>Scully</span>
       </div>
 
-
       <div class="row justify-content-space-between align-items-center">
         <div class="img-wrapper">
           <img
@@ -80,25 +79,8 @@
     </div>
     <hr />
 
-    <app-show-more-button
-      elementId="slides"
-      toggleClass="open"
-    ></app-show-more-button>
+    <app-gallery [slides]="images"></app-gallery>
 
-    <div class="row slides" id="slides">
-      <img
-        class="slide"
-        src="assets/images/climate-camp-website/climate-camp-website-01.png"
-        alt="main page"
-        onclick="showImage()"
-      />
-      <img
-        class="slide"
-        src="assets/images/climate-camp-website/climate-camp-website-02.png"
-        alt="subpage"
-        onclick="showImage()"
-      />
-    </div>
     <hr />
     <div class="row justify-content-center align-items-center">
       <img class="icon" src="assets/images/icons/climate-camp-logo.png" />

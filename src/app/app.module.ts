@@ -6,17 +6,16 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ClickOutsideDirective } from './shared/click-outside.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ClickOutsideDirective
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     HttpClientModule,
     ReactiveFormsModule,
     CollapseModule.forRoot(),
-    ScullyLibModule
+    ScullyLibModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
