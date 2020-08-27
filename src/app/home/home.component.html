@@ -13,8 +13,7 @@
       <div
         id="navigation"
         class="navigation-small"
-        [collapse]="isCollapsed"
-        [isAnimated]="true"
+        [ngClass]="{'collapsed': isCollapsed}"
       >
         <ul>
           <li>

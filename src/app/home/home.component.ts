@@ -1,13 +1,11 @@
-import { Component, OnInit, ElementRef } from "@angular/core";
+import { Component } from "@angular/core";
 import {
-  NgForm,
   FormGroup,
   Validators,
   FormControl,
   FormBuilder,
 } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-home",
