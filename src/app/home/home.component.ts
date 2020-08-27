@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef } from "@angular/core";
 import {
   NgForm,
   FormGroup,
@@ -7,13 +7,14 @@ import {
   FormBuilder,
 } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   isCollapsed = true;
   formSubmitted = false;
 
@@ -27,7 +28,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  scrollToSection(section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    this.isCollapsed = true;
+  }
 
   get f() {
     return this.form.controls;

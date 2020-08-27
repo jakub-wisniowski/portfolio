@@ -20,24 +20,21 @@
           <li>
             <a
               class="navigation-link-small"
-              href="#about"
-              (click)="isCollapsed = true"
+              (click)="scrollToSection(about)"
               >ABOUT</a
             >
           </li>
           <li>
             <a
               class="navigation-link-small"
-              href="#projects"
-              (click)="isCollapsed = true"
+              (click)="scrollToSection(projects)"
               >PROJECTS</a
             >
           </li>
           <li>
             <a
               class="navigation-link-small"
-              href="#contact"
-              (click)="isCollapsed = true"
+              (click)="scrollToSection(contact)"
               >CONTACT</a
             >
           </li>
@@ -45,13 +42,13 @@
       </div>
       <ul class="navigation">
         <li>
-          <a class="navigation-link border-link" href="#about">ABOUT</a>
+          <a class="navigation-link border-link" (click)="scrollToSection(about)">ABOUT</a>
         </li>
         <li>
-          <a class="navigation-link border-link" href="#projects">PROJECTS</a>
+          <a class="navigation-link border-link" (click)="scrollToSection(projects)">PROJECTS</a>
         </li>
         <li>
-          <a class="navigation-link border-link" href="#contact">CONTACT</a>
+          <a class="navigation-link border-link" (click)="scrollToSection(contact)">CONTACT</a>
         </li>
       </ul>
     </div>
@@ -60,7 +57,7 @@
     <div class="banner_bg_opacity"></div>
     <div class="my_name">
       <h1>JAKUB WIŚNIOWSKI</h1>
-      <h2>JUNIOR FRONT-END DEVELOPER</h2>
+      <h2>FRONT-END DEVELOPER</h2>
     </div>
     <div class="my_places_center">
       <div class="my_places">
@@ -83,7 +80,7 @@
       </div>
     </div>
   </section>
-  <section id="about">
+  <section id="about" #about>
     <h3 class="section-header">About me</h3>
     <div class="container" id="bio_wrap">
       <div class="bio">
@@ -124,7 +121,7 @@
       </div>
     </div>
   </section>
-  <section id="projects">
+  <section id="projects" #projects>
     <h3 class="section-header">Projects</h3>
     <div class="container projects_container">
       <div class="flex-wrapper">
@@ -270,7 +267,7 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section id="contact" #contact>
     <div class="contact_opacity"></div>
     <h3 class="section-header">Contact</h3>
     <div class="container">
