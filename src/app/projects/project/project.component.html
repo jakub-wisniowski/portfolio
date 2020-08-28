@@ -1,0 +1,55 @@
+<div class="subpage-wrapper">
+
+    <h1 class="section-header">
+      <app-navbar></app-navbar>
+      {{project.title}}
+    </h1>
+  
+    <div id="intro">
+      <div class="description">
+        <p *ngFor="let desc of project.description">
+          {{desc}}
+        </p>
+      </div>
+  
+      <hr />
+      <div class="technologies">
+        <div class="row justify-content-space-between align-items-center" *ngFor="let technology of project.technologies">
+          <div class="img-wrapper">
+            <img
+              class="icon"
+              [src]="technology.image"
+              aria-hidden="true"
+            />
+          </div>
+          <span>{{technology.name}}</span>
+        </div>
+      </div>
+  
+      <hr />
+      <div class="experience">
+        <p>
+          {{project.experience}}
+        </p>
+      </div>
+      <hr />
+  
+      <app-gallery [slides]="project.images"></app-gallery>
+  
+      <hr />
+      <app-github-button
+        *ngIf="project.repo"
+        [repo]="project.repo"
+      ></app-github-button>
+
+      <div class="row justify-content-center align-items-center" *ngIf="!project.repo">
+        <img class="icon" [src]="project.website.icon" />
+  
+        <a [href]="project.website.href" target="-blank" class="border-link"
+          >{{project.website.linkText}}</a
+        >
+      </div>
+      <hr />
+    </div>
+  </div>
+  

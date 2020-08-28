@@ -5,7 +5,7 @@ import {
   Input,
 } from "@angular/core";
 import { BsModalService, BsModalRef } from "ngx-bootstrap/modal";
-import { IImage } from "../models/image";
+import { IImage } from "../../projects/models/image.model";
 
 @Component({
   selector: "app-gallery",

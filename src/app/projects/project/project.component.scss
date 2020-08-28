@@ -59,35 +59,3 @@ h1 {
 	margin-top: 3px;
 	width: 100%;
 }
-
-.popup {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, -100%);
-	z-index: 9;
-	max-width: 90%;
-	transition: transform 0.3s;
-	border: 5px solid $blue;
-	border-radius: 5px;
-	margin-bottom: 50px;
-
-	&.visible {
-		transform: translate(-50%, 150px);
-	}
-
-	.popup-content {
-		position: relative;
-
-		.close-popup {
-			position: absolute;
-			top: -20px;
-			right: -20px;
-			cursor: pointer;
-		}
-
-		img {
-			max-width: 100%;
-		}
-	}
-}
