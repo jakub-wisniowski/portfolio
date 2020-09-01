@@ -7,9 +7,7 @@
   
     <div id="intro">
       <div class="description">
-        <p *ngFor="let desc of project.description">
-          {{desc}}
-        </p>
+        <p *ngFor="let desc of project.description" [innerHTML]="desc"></p>
       </div>
   
       <hr />

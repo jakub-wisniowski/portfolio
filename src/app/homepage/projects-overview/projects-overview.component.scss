@@ -1,0 +1,105 @@
+@import "~src/styles/styles";
+
+.container {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+
+    .sep-row {
+      .col {
+        border-left: 1px solid rgb(216, 208, 208);
+        border-right: 1px solid rgb(216, 208, 208);
+        height: 60px;
+      }
+    }
+
+    h3 {
+        font-size: 80px;
+    }
+  
+    a {
+      display: block;
+      position: relative;
+      background: $blue;
+      cursor: pointer;
+      overflow: hidden;
+      height: calc(100vh - 60px);
+  
+      .project_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        color: black;
+        transform: translate(-50%, -50%);
+        transition: opacity ease-out 250ms;
+      }
+
+      &:hover, &:focus {
+          background: white;
+      }
+
+
+  
+    .project_image {
+        display: block;
+        border: 5px solid $blue;
+        border-radius: 10px;
+        overflow: hidden;
+        transform: scale(1);
+        transition: transform 3s cubic-bezier(0.075, 0.12, 0.165, 1);
+        opacity: 0.3;
+        height: 100%;
+    
+        img {
+          height: 100%;
+        }
+      }
+  
+      &:hover .project_text,
+      &:focus .project_text {
+        opacity: 1;
+      }
+  
+      &:hover .project_image,
+      &:focus .project_image {
+        opacity: 0.5;
+        transform: scale(1.2);
+        transition: transform 7s cubic-bezier(0.075, 0.12, 0.165, 1);
+      }
+  
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5em;
+        bottom: 5em;
+        left: 5em;
+        right: 5em;
+        transition: transform ease-out 250ms;
+      }
+  
+      &::after {
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+        transform: scale(0, 1);
+      }
+  
+      &::before {
+        border-left: 4px solid black;
+        border-right: 4px solid black;
+        transform: scale(1, 0);
+      }
+  
+      &:hover::after,
+      &:focus::after {
+        transform: scale(1.05, 1);
+      }
+  
+      &:hover::before,
+      &:focus::before {
+        transform: scale(1, 1.05);
+      }
+    }
+  }
