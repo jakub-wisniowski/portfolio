@@ -6,12 +6,16 @@
 
   <div class="row m-0">
     <div class="col m-0 p-0">
-      <a [routerLink]="['projects/home-library']">
+      <a
+        [routerLink]="['projects/home-library']"
+        #homeLibrary
+        intersection
+        (visibilityChange)="
+          handleIntersection($event, homeLibrary, 'homeLibrary')
+        "
+      >
         <div class="project_image">
-          <img
-            src="assets/images/home-library/home-library-icon.png"
-            alt="Home library project"
-          />
+          <img alt="Home library project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Home library</h3>
@@ -23,12 +27,14 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/planets']">
+      <a
+        [routerLink]="['projects/planets']"
+        #planets
+        intersection
+        (visibilityChange)="handleIntersection($event, planets, 'planets')"
+      >
         <div class="project_image">
-          <img
-            src="assets/images/planets/list-view.png"
-            alt="Planets project"
-          />
+          <img alt="Planets project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Planets</h3>
@@ -40,12 +46,14 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/AKN-web-app']">
+      <a
+        [routerLink]="['projects/AKN-web-app']"
+        #aknWebApp
+        intersection
+        (visibilityChange)="handleIntersection($event, aknWebApp, 'aknWebApp')"
+      >
         <div class="project_image">
-          <img
-            src="assets/images/AKN-web-app/modify-account.png"
-            alt="AKN web project"
-          />
+          <img alt="AKN web project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">AKN webapp</h3>
@@ -57,12 +65,16 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/AKN-mobile-app']">
+      <a
+        [routerLink]="['projects/AKN-mobile-app']"
+        #aknMobileApp
+        intersection
+        (visibilityChange)="
+          handleIntersection($event, aknMobileApp, 'aknMobileApp')
+        "
+      >
         <div class="project_image">
-          <img
-            src="assets/images/AKN-mobile-app/login-icon.png"
-            alt="AKN mobile project"
-          />
+          <img alt="AKN mobile project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">AKN mobile app</h3>
@@ -76,7 +88,7 @@
 
       <!-- <a [routerLink]="['projects/RPN-calc']">
             <div class="project_image">
-              <img src="assets/images/RPN-calc/basic.png" alt="RPN project" />
+              <img alt="RPN project" />
             </div>
             <div class="project_text">
               <h3 class="mb-0">RPN calculator</h3>
@@ -89,12 +101,14 @@
         
         -->
 
-      <a [routerLink]="['projects/lego-app']">
+      <a
+        [routerLink]="['projects/lego-app']"
+        #legoApp
+        intersection
+        (visibilityChange)="handleIntersection($event, legoApp, 'legoApp')"
+      >
         <div class="project_image">
-          <img
-            src="assets/images/lego-app/project-view.png"
-            alt="LEGO project"
-          />
+          <img alt="LEGO project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Lego app</h3>
@@ -106,9 +120,16 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/mr-dumpling']">
+      <a
+        [routerLink]="['projects/mr-dumpling']"
+        #mrDumpling
+        intersection
+        (visibilityChange)="
+          handleIntersection($event, mrDumpling, 'mrDumpling')
+        "
+      >
         <div class="project_image">
-          <img src="assets/images/mr-dumpling/menu.png" alt="Thesis project" />
+          <img alt="Thesis project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Mr Dumpling</h3>
@@ -120,12 +141,16 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/climate-camp']">
+      <a
+        [routerLink]="['projects/climate-camp']"
+        #climateCamp
+        intersection
+        (visibilityChange)="
+          handleIntersection($event, climateCamp, 'climateCamp')
+        "
+      >
         <div class="project_image">
-          <img
-            src="assets/images/climate-camp/menu.png"
-            alt="Climate camp project"
-          />
+          <img alt="Climate camp project" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Climate Camp Mobile app</h3>
@@ -137,12 +162,16 @@
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a [routerLink]="['projects/climate-camp-website']">
+      <a
+        [routerLink]="['projects/climate-camp-website']"
+        #climateCampWebsite
+        intersection
+        (visibilityChange)="
+          handleIntersection($event, climateCampWebsite, 'climateCampWebsite')
+        "
+      >
         <div class="project_image">
-          <img
-            src="assets/images/icons/climate-camp-logo.png"
-            alt="Climate camp website"
-          />
+          <img alt="Climate camp website" />
         </div>
         <div class="project_text">
           <h3 class="mb-0">Climate Camp website</h3>
