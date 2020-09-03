@@ -2,4 +2,8 @@
     .fs-#{$i} {
         font-size: $i * 1px;
     }
+
+    .lh-#{$i} {
+        line-height: $i * 1px;
+    }
 }

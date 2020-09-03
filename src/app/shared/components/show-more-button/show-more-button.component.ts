@@ -3,7 +3,9 @@ import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-show-more-button',
-    template: `<div class="button-wrapper"><button (click)="toggleDescription()">{{ isHidden ? 'Show gallery' : 'Hide gallery'}}</button></div>`,
+    template: `<div class="button-wrapper">
+        <button class="border-link" (click)="toggleDescription()">{{ isHidden ? 'Show gallery' : 'Hide gallery'}}</button>
+    </div>`,
     styleUrls: ['./show-more-button.component.scss']
 })
 

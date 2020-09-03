@@ -80,12 +80,6 @@
   
         a {
           position: relative;
-  
-          &::before {
-            border-top: 2px solid $light-grey !important;
-            border-bottom: 2px solid $light-grey !important;
-          }
-  
           &:hover {
             color: white;
           }

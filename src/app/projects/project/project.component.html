@@ -1,32 +1,41 @@
-<div class="subpage-wrapper">
-
+<div class="subpage-wrapper fs-26">
+  <div class="header-wrapper position-relative">
     <h1 class="section-header">
-      <app-navbar></app-navbar>
+      <a [routerLink]="['/']" class="go-back"></a>
       {{project.title}}
     </h1>
+
+  </div>
   
-    <div id="intro">
-      <div class="description">
-        <p *ngFor="let desc of project.description" [innerHTML]="desc"></p>
+    <div class="intro">
+      <div class="description w-100">
+        <h2 class="font-weight-bold">Description</h2>
+        <p class="text-justify" *ngFor="let desc of project.description" [innerHTML]="desc"></p>
       </div>
   
       <hr />
       <div class="technologies">
-        <div class="row justify-content-space-between align-items-center" *ngFor="let technology of project.technologies">
-          <div class="img-wrapper">
-            <img
-              class="icon"
-              [src]="technology.image"
-              aria-hidden="true"
-            />
+        <h2 class="font-weight-bold">Technologies</h2>
+        <div class="row justify-content-space-between align-items-center">
+          <div class="col-md-6 col-sm-12"  *ngFor="let technology of project.technologies">
+            <div class="row">
+              <div class="text-right col-6">
+                <img
+                  class="icon"
+                  [src]="technology.image"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="col-6" class="lh-52">{{technology.name}}</div>
+            </div>
           </div>
-          <span>{{technology.name}}</span>
         </div>
       </div>
   
       <hr />
-      <div class="experience">
-        <p>
+      <div class="experience w-100">
+        <h2 class="font-weight-bold">Experience</h2>
+        <p class="text-justify">
           {{project.experience}}
         </p>
       </div>
@@ -43,9 +52,9 @@
       <div class="row justify-content-center align-items-center" *ngIf="!project.repo">
         <img class="icon" [src]="project.website.icon" />
   
-        <a [href]="project.website.href" target="-blank" class="border-link"
-          >{{project.website.linkText}}</a
-        >
+        <a [href]="project.website.href" target="-blank" class="border-link">
+          {{project.website.linkText}}
+          </a>
       </div>
       <hr />
     </div>

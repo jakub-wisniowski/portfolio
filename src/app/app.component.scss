@@ -32,10 +32,11 @@
 #backToTop:hover,
 #backToTop:focus {
   background: url($img_prefix+"icons/paper-plane-hover.png");
+  animation: pulsate 4s linear both;
 }
 
 #backToTop.active {
-  animation: fly 2s linear both;
+  animation: fly 4s linear;
   transform: translate3d(0, 0, 0);
   background: url($img_prefix+"icons/paper-plane-flying.png");
 }
@@ -66,5 +67,21 @@
 
   80% {
     transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes pulsate {
+  10%,
+  90% {
+    transform: scale(0.9);
+  }
+
+  30%,
+  70% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
   }
 }

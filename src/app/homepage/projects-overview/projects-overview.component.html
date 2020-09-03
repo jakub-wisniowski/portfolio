@@ -6,81 +6,111 @@
 
   <div class="row m-0">
     <div class="col m-0 p-0">
-      <a
-        [routerLink]="['projects/home-library']"
-        #homeLibrary
-        intersection
-        (visibilityChange)="
-          handleIntersection($event, homeLibrary, 'homeLibrary')
-        "
-      >
-        <div class="project_image">
-          <img alt="Home library project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/home-library']"
+            #homeLibrary
+            intersection
+            (visibilityChange)="
+              handleIntersection($event, homeLibrary, 'homeLibrary')
+            "
+          >
+            <div class="project_image">
+              <img alt="Home library project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Home library</h3>
+              <p class="text-center fs-32">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Home library</h3>
-          <p class="text-center fs-64">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/planets']"
-        #planets
-        intersection
-        (visibilityChange)="handleIntersection($event, planets, 'planets')"
-      >
-        <div class="project_image">
-          <img alt="Planets project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/planets']"
+            #planets
+            intersection
+            (visibilityChange)="handleIntersection($event, planets, 'planets')"
+          >
+            <div class="project_image">
+              <img alt="Planets project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Planets</h3>
+              <p class="text-center fs-32">Angular&nbsp;CSS3&nbsp;Bootstrap</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Planets</h3>
-          <p class="text-center fs-64">Angular&nbsp;CSS3&nbsp;Bootstrap</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/AKN-web-app']"
-        #aknWebApp
-        intersection
-        (visibilityChange)="handleIntersection($event, aknWebApp, 'aknWebApp')"
-      >
-        <div class="project_image">
-          <img alt="AKN web project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/AKN-web-app']"
+            #aknWebApp
+            intersection
+            (visibilityChange)="
+              handleIntersection($event, aknWebApp, 'aknWebApp')
+            "
+          >
+            <div class="project_image">
+              <img alt="AKN web project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">AKN webapp</h3>
+              <p class="text-center fs-32">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">AKN webapp</h3>
-          <p class="text-center fs-64">Angular&nbsp;SailsJS&nbsp;MongoDB</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/AKN-mobile-app']"
-        #aknMobileApp
-        intersection
-        (visibilityChange)="
-          handleIntersection($event, aknMobileApp, 'aknMobileApp')
-        "
-      >
-        <div class="project_image">
-          <img alt="AKN mobile project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/AKN-mobile-app']"
+            #aknMobileApp
+            intersection
+            (visibilityChange)="
+              handleIntersection($event, aknMobileApp, 'aknMobileApp')
+            "
+          >
+            <div class="project_image">
+              <img alt="AKN mobile project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">AKN mobile app</h3>
+              <p class="fs-32">Ionic2&nbsp;HTML5&nbsp;CSS3</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">AKN mobile app</h3>
-          <p class="fs-64">Ionic2&nbsp;HTML5&nbsp;CSS3</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
@@ -90,9 +120,9 @@
             <div class="project_image">
               <img alt="RPN project" />
             </div>
-            <div class="project_text">
-              <h3 class="mb-0">RPN calculator</h3>
-              <p class="text-center fs-64">Android<br />Kotlin<br />SQLite</p>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">RPN calculator</h3>
+              <p class="text-center fs-32">Android Kotlin SQLite</p>
             </div>
           </a>
            <div class="row w-100 m-0 sep-row">
@@ -101,83 +131,119 @@
         
         -->
 
-      <a
-        [routerLink]="['projects/lego-app']"
-        #legoApp
-        intersection
-        (visibilityChange)="handleIntersection($event, legoApp, 'legoApp')"
-      >
-        <div class="project_image">
-          <img alt="LEGO project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/lego-app']"
+            #legoApp
+            intersection
+            (visibilityChange)="handleIntersection($event, legoApp, 'legoApp')"
+          >
+            <div class="project_image">
+              <img alt="LEGO project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Lego app</h3>
+              <p class="text-center fs-32">Android Kotlin SQLite</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Lego app</h3>
-          <p class="text-center fs-64">Android<br />Kotlin<br />SQLite</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/mr-dumpling']"
-        #mrDumpling
-        intersection
-        (visibilityChange)="
-          handleIntersection($event, mrDumpling, 'mrDumpling')
-        "
-      >
-        <div class="project_image">
-          <img alt="Thesis project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/mr-dumpling']"
+            #mrDumpling
+            intersection
+            (visibilityChange)="
+              handleIntersection($event, mrDumpling, 'mrDumpling')
+            "
+          >
+            <div class="project_image">
+              <img alt="Thesis project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Mr Dumpling</h3>
+              <p class="text-center fs-32">
+                Unity&nbsp;C#&nbsp;Google&nbsp;Play
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Mr Dumpling</h3>
-          <p class="text-center fs-64">Unity&nbsp;C#&nbsp;Google&nbsp;Play</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/climate-camp']"
-        #climateCamp
-        intersection
-        (visibilityChange)="
-          handleIntersection($event, climateCamp, 'climateCamp')
-        "
-      >
-        <div class="project_image">
-          <img alt="Climate camp project" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/climate-camp']"
+            #climateCamp
+            intersection
+            (visibilityChange)="
+              handleIntersection($event, climateCamp, 'climateCamp')
+            "
+          >
+            <div class="project_image">
+              <img alt="Climate camp project" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Climate Camp Mobile app</h3>
+              <p class="text-center fs-32">Flutter Dart Firebase</p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Climate Camp Mobile app</h3>
-          <p class="text-center fs-64">Flutter<br />Dart<br />Firebase</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>
       </div>
 
-      <a
-        [routerLink]="['projects/climate-camp-website']"
-        #climateCampWebsite
-        intersection
-        (visibilityChange)="
-          handleIntersection($event, climateCampWebsite, 'climateCampWebsite')
-        "
-      >
-        <div class="project_image">
-          <img alt="Climate camp website" />
+      <div class="row w-100 m-0">
+        <div class="col-2"></div>
+        <div class="col-8 p-0">
+          <a
+            class="project-link"
+            [routerLink]="['projects/climate-camp-website']"
+            #climateCampWebsite
+            intersection
+            (visibilityChange)="
+              handleIntersection(
+                $event,
+                climateCampWebsite,
+                'climateCampWebsite'
+              )
+            "
+          >
+            <div class="project_image">
+              <img alt="Climate camp website" />
+            </div>
+            <div class="project-text">
+              <h3 class="mb-0 fs-50">Climate Camp website</h3>
+              <p class="text-center fs-32">
+                Angular 9 Scully Bootstrap
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="project_text">
-          <h3 class="mb-0">Climate Camp website</h3>
-          <p class="text-center fs-64">Angular 9<br />Scully<br />Bootstrap</p>
-        </div>
-      </a>
+        <div class="col-2"></div>
+      </div>
 
       <div class="row w-100 m-0 sep-row">
         <div class="col" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></div>

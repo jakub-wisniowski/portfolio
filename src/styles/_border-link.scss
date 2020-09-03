@@ -5,13 +5,13 @@
     &::before {
       content: "";
       position: absolute;
-      top: -6px;
+      top: -10px;
+      bottom: -10px;
       left: 0;
       right: 0;
-      height: 2em;
       transition: transform ease-out 250ms;
-      border-top: 1px solid $light-grey;
-      border-bottom: 1px solid $light-grey;
+      border-top: 2px solid $light-grey;
+      border-bottom: 2px solid $light-grey;
       transform: scale(0, 1);
     }
   
