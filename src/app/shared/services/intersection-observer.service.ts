@@ -26,7 +26,6 @@ export class IntersectionObserverService {
           (entries, observer) => {
             entries.forEach(entry => {
               subscriber.next(entry);
-              console.log('emitting for: ', entry.target)
               if (stopWhenVisible && entry.isIntersecting)
                 observer.unobserve(entry.target);
             });

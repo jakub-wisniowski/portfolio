@@ -1,38 +1,6 @@
 <div class="content-wrapper">
   <section class="page-header">
-    <div class="container" (clickOutside)="isCollapsed = true">
-      <div
-        class="hamburger-menu"
-        type="button"
-        (click)="isCollapsed = !isCollapsed"
-        [attr.aria-expanded]="!isCollapsed"
-        aria-controls="navigation"
-      >
-        <img width="50" src="assets/images/icons/hamburger.png" />
-      </div>
-      <div
-        id="navigation"
-        class="navigation-small"
-        [ngClass]="{ collapsed: isCollapsed }"
-      >
-        <ul>
-          <li>
-            <a class="navigation-link-small" (click)="scrollToSection(about)"
-              >ABOUT</a
-            >
-          </li>
-          <li>
-            <a class="navigation-link-small" (click)="scrollToSection(projects)"
-              >PROJECTS</a
-            >
-          </li>
-          <li>
-            <a class="navigation-link-small" (click)="scrollToSection(contact)"
-              >CONTACT</a
-            >
-          </li>
-        </ul>
-      </div>
+    <div class="container">
       <ul class="navigation">
         <li>
           <a
@@ -58,6 +26,44 @@
       </ul>
     </div>
   </section>
+
+  <div
+    class="hamburger-menu"
+    [attr.aria-expanded]="!isCollapsed"
+    aria-controls="navigation"
+    (clickOutside)="isCollapsed = true"
+  >
+    <button (click)="isCollapsed = !isCollapsed">
+      <img
+        src="assets/images/icons/hamburger.png"
+        width="50"
+        alt="toggle menu"
+      />
+    </button>
+    <div
+      id="navigation"
+      class="navigation-small"
+      [ngClass]="{ collapsed: isCollapsed }"
+    >
+      <ul>
+        <li>
+          <a class="navigation-link-small" (click)="scrollToSection(about)"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a class="navigation-link-small" (click)="scrollToSection(projects)"
+            >PROJECTS</a
+          >
+        </li>
+        <li>
+          <a class="navigation-link-small" (click)="scrollToSection(contact)"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
   <section class="banner">
     <div class="banner-bg-opacity"></div>
     <div class="my-name">
@@ -94,7 +100,7 @@
         intersection
         (visibilityChange)="handleIntersection($event, bio)"
       >
-        <div id="imageWrapper" class="col-4">
+        <div id="imageWrapper" class="col-sm-12 col-md-4">
           <img
             class="profile-picture"
             src="assets/images/profile.jpeg"
