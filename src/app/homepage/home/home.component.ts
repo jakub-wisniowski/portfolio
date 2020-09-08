@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Renderer2 } from "@angular/core";
 import {
   FormGroup,
   Validators,
@@ -18,7 +18,7 @@ export class HomeComponent {
 
   form: FormGroup;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private renderer: Renderer2) {
     this.form = this.fb.group({
       name: new FormControl("", [Validators.required]),
       email: new FormControl("", [Validators.required, Validators.email]),
@@ -31,16 +31,12 @@ export class HomeComponent {
     this.isCollapsed = true;
   }
 
-  get f() {
-    return this.form.controls;
-  }
-
   submit() {
     this.http
       .post("https://formspree.io/jakub.m.wisniowski@gmail.com", {
         name: this.form.controls.name.value,
         email: this.form.controls.email.value,
-        message: "this.form.controls.message.value",
+        message: this.form.controls.message.value,
       })
       .subscribe((_) => {
         this.formSubmitted = true;
@@ -48,5 +44,11 @@ export class HomeComponent {
           this.formSubmitted = false;
         }, 3000);
       });
+  }
+
+  handleIntersection(visible: boolean, el: HTMLElement) {
+    visible
+      ? this.renderer.addClass(el, "intersecting")
+      : this.renderer.removeClass(el, "intersecting");
   }
 }
