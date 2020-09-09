@@ -1,6 +1,6 @@
 @import "~src/styles/colors";
 @import "~src/styles/variables";
-
+@import "~src/styles/animations";
 
 .footer {
   width: 100%;
@@ -32,56 +32,11 @@
 #backToTop:hover,
 #backToTop:focus {
   background: url($img_prefix+"icons/paper-plane-hover.png");
-  animation: pulsate 4s linear both;
+  animation: pulsate 4s linear forwards infinite;
 }
 
 #backToTop.active {
-  animation: fly 4s linear;
+  animation: fly 2s linear forwards infinite;
   transform: translate3d(0, 0, 0);
   background: url($img_prefix+"icons/paper-plane-flying.png");
-}
-
-@keyframes fly {
-  10%,
-  50% {
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  20%,
-  40% {
-    transform: translate3d(-20px, 0, 0);
-  }
-
-  30% {
-    transform: translate3d(-30px, 0, 0);
-  }
-
-  60% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  70%,
-  90% {
-    transform: translate3d(10px, 0, 0);
-  }
-
-  80% {
-    transform: translate3d(20px, 0, 0);
-  }
-}
-
-@keyframes pulsate {
-  10%,
-  90% {
-    transform: scale(0.9);
-  }
-
-  30%,
-  70% {
-    transform: scale(1.1);
-  }
-
-  50% {
-    transform: scale(1);
-  }
 }

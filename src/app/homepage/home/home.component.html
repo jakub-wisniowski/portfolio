@@ -4,22 +4,28 @@
       <ul class="navigation">
         <li>
           <a
+            tabindex="0"
             class="navigation-link border-link fs-34"
-            (click)="scrollToSection(about)"
+            (click)="scrollToSection($event, about)"
+            (keydown)="scrollToSection($event, about)"
             >ABOUT</a
           >
         </li>
         <li>
           <a
+            tabindex="0"
             class="navigation-link border-link fs-34"
-            (click)="scrollToSection(projects)"
+            (click)="scrollToSection($event, projects)"
+            (keydown)="scrollToSection($event, projects)"
             >PROJECTS</a
           >
         </li>
         <li>
           <a
+            tabindex="0"
             class="navigation-link border-link fs-34"
-            (click)="scrollToSection(contact)"
+            (click)="scrollToSection($event, contact)"
+            (keydown)="scrollToSection($event, contact)"
             >CONTACT</a
           >
         </li>
@@ -33,7 +39,7 @@
     aria-controls="navigation"
     (clickOutside)="isCollapsed = true"
   >
-    <button (click)="isCollapsed = !isCollapsed">
+    <button (click)="isCollapsed = !isCollapsed" tabindex="0">
       <img
         src="assets/images/icons/hamburger.png"
         width="50"
@@ -46,18 +52,24 @@
       [ngClass]="{ collapsed: isCollapsed }"
     >
       <ul>
-        <li>
-          <a class="navigation-link-small" (click)="scrollToSection(about)"
+        <li tabindex="0" (keydown)="scrollToSection($event, about)">
+          <a
+            class="navigation-link-small"
+            (click)="scrollToSection($event, about)"
             >ABOUT</a
           >
         </li>
-        <li>
-          <a class="navigation-link-small" (click)="scrollToSection(projects)"
+        <li tabindex="0" (keydown)="scrollToSection($event, projects)">
+          <a
+            class="navigation-link-small"
+            (click)="scrollToSection($event, projects)"
             >PROJECTS</a
           >
         </li>
-        <li>
-          <a class="navigation-link-small" (click)="scrollToSection(contact)"
+        <li tabindex="0" (keydown)="scrollToSection($event, contact)">
+          <a
+            class="navigation-link-small"
+            (click)="scrollToSection($event, contact)"
             >CONTACT</a
           >
         </li>
@@ -149,7 +161,7 @@
     <h3 class="section-header">Contact</h3>
     <div class="container">
       <div class="row">
-        <p class="instruction fs-26">
+        <p class="instruction fs-26 w-100">
           Contact me via the form below or send an email to the following
           address:
           <a

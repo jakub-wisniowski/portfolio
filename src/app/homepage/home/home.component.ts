@@ -26,9 +26,11 @@ export class HomeComponent {
     });
   }
 
-  scrollToSection(section) {
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-    this.isCollapsed = true;
+  scrollToSection(event, section) {
+    if(event instanceof MouseEvent || (event instanceof KeyboardEvent && event.key === 'Enter')) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      this.isCollapsed = true;
+    }
   }
 
   submit() {
