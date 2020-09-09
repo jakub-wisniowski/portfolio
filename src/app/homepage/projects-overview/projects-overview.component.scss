@@ -23,7 +23,7 @@
     height: 50vh;
     border: 5px solid $blue;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px $yellow;
+    box-shadow: 10px 10px 10px $accent;
 
     .project-text {
       position: absolute;
@@ -40,7 +40,7 @@
     &:hover,
     &:focus {
       background: white;
-      box-shadow: 20px 20px 10px $yellow;
+      box-shadow: 20px 20px 10px $accent;
     }
 
     .project-image {
